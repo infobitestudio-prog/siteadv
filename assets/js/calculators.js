@@ -178,10 +178,25 @@
 
     var total = rows.reduce(function (s, r) { return s + r[1]; }, 0);
 
+    // Descontos de INSS e IRRF (tabelas configuradas no painel)
+    var tab = null;
+    try { tab = JSON.parse(form.getAttribute('data-tabelas') || 'null'); } catch (e) {}
+    var descontos = [], totalDesc = 0;
+    if (tab && tab.inss && tab.inss.length) {
+      var deps = Math.max(0, Math.round(num('dependentes')));
+      var inssSaldo = calcInss(saldo, tab), inss13 = calcInss(decimo, tab);
+      var irSaldo = calcIr(saldo, inssSaldo, deps, tab), ir13 = calcIr(decimo, inss13, deps, tab);
+      if (inssSaldo) descontos.push(['INSS sobre o saldo de salário', -inssSaldo, { neg: true }]);
+      if (inss13) descontos.push(['INSS sobre o 13º salário', -inss13, { neg: true }]);
+      if (irSaldo) descontos.push(['Imposto de Renda sobre o saldo de salário', -irSaldo, { neg: true }]);
+      if (ir13) descontos.push(['Imposto de Renda sobre o 13º salário', -ir13, { neg: true, note: 'tributação exclusiva' }]);
+      totalDesc = inssSaldo + inss13 + irSaldo + ir13;
+    }
+
     var saque = { sem_justa: 'Saque de 100% do FGTS e direito ao seguro-desemprego, se cumpridos os requisitos.', acordo: 'Saque de até 80% do FGTS. Não há direito ao seguro-desemprego.', pedido: 'Sem saque do FGTS e sem seguro-desemprego.', justa: 'Sem saque do FGTS e sem seguro-desemprego.', termino: 'Saque do FGTS permitido. Sem multa de 40% quando o contrato termina no prazo.' }[tipo];
 
     var notes = [
-      'Valores brutos, sem descontos de INSS e Imposto de Renda.',
+      tab && tab.inss && tab.inss.length ? 'Descontos estimados com as tabelas de ' + (tab.ano || 'INSS e IRRF') + '. Férias indenizadas, aviso prévio indenizado e multa do FGTS não têm desconto de INSS nem de Imposto de Renda.' : 'Valores brutos, sem descontos de INSS e Imposto de Renda.',
       saque,
       'Tempo de casa: ' + anos + (anos === 1 ? ' ano' : ' anos') + '. Aviso prévio proporcional de ' + diasAvisoProp + ' dias.'
     ];
@@ -189,7 +204,39 @@
     if (venc === 2) notes.push('Férias vencidas há mais de um ano podem ter de ser pagas em dobro (art. 137 da CLT).');
     notes.push('Também são devidos o depósito de FGTS do mês da rescisão (estimado em ' + money(fgtsRescisorio) + ') e eventuais diferenças previstas em convenção coletiva.');
 
-    render('Total estimado a receber', total, [{ rows: rows }], notes);
+    var groups = [{ caption: descontos.length ? 'Verbas' : '', rows: rows.concat(descontos.length ? [['Total bruto', total, { sub: true }]] : []) }];
+    if (descontos.length) groups.push({ caption: 'Descontos', rows: descontos.concat([['Total líquido estimado', total - totalDesc, { sub: true }]]) });
+    render(descontos.length ? 'Total líquido estimado' : 'Total estimado a receber', descontos.length ? total - totalDesc : total, groups, notes);
+  }
+
+  /** INSS progressivo: cada alíquota incide só sobre a parte do valor dentro da faixa. */
+  function calcInss(base, tab) {
+    var prev = 0, total = 0;
+    for (var i = 0; i < tab.inss.length; i++) {
+      var lim = +tab.inss[i][0], rate = +tab.inss[i][1] / 100;
+      if (base <= prev) break;
+      total += (Math.min(base, lim) - prev) * rate;
+      prev = lim;
+    }
+    return Math.round(total * 100) / 100;
+  }
+
+  /** IRRF mensal com a dedução mais vantajosa (INSS + dependentes ou desconto simplificado) e o redutor da Lei 15.270/2025. */
+  function calcIr(bruto, inss, deps, tab) {
+    if (!bruto) return 0;
+    var deducao = Math.max(inss + deps * (tab.dep || 0), tab.simp || 0);
+    var base = Math.max(0, bruto - deducao), imposto = 0;
+    for (var i = 0; i < tab.irrf.length; i++) {
+      var lim = +tab.irrf[i][0];
+      if (!lim || base <= lim) { imposto = base * (+tab.irrf[i][1] / 100) - (+tab.irrf[i][2]); break; }
+    }
+    imposto = Math.max(0, imposto);
+    var r = tab.red;
+    if (r && imposto > 0) {
+      var reducao = bruto <= r.ate ? Math.min(imposto, r.max) : (bruto <= r.limite ? Math.max(0, r.a - r.b * bruto) : 0);
+      imposto = Math.max(0, imposto - reducao);
+    }
+    return Math.round(imposto * 100) / 100;
   }
 
   /* =====================================================================
