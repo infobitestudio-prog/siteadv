@@ -120,3 +120,6 @@ window.addEventListener('message', function (e) {
   lb.querySelector('.lb-close').addEventListener('click', function () { lb.close(); });
   lb.addEventListener('click', function (e) { if (e.target === lb) lb.close(); });
 })();
+
+// Ano do rodapé sempre atual (também nas versões estáticas do site)
+document.querySelectorAll('[data-ano]').forEach(function (el) { el.textContent = new Date().getFullYear(); });
