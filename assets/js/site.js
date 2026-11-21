@@ -153,12 +153,47 @@ document.querySelectorAll('[data-ano]').forEach(function (el) { el.textContent =
     window.addEventListener('scroll', onScroll, { passive: true }); onScroll();
   }
 
+
+  // Carrossel (avaliações): botões rolam um cartão por vez
+  document.querySelectorAll('[data-carrossel]').forEach(function (tr) {
+    var box = tr.parentElement;
+    box.querySelectorAll('[data-car]').forEach(function (b) {
+      b.addEventListener('click', function () { var c = tr.firstElementChild; tr.scrollBy({ left: +b.dataset.car * ((c ? c.offsetWidth : 300) + 20), behavior: 'smooth' }); });
+    });
+  });
+
+
+  // Modelos Noir: título palavra por palavra, luz que segue o mouse, cartões 3D e última palavra dos títulos em destaque
+  if (body.classList.contains('skin-noir')) {
+    var nt = document.querySelector('[data-palavras]');
+    if (nt && !reduce) {
+      var k = 0;
+      [].slice.call(nt.childNodes).forEach(function (n) {
+        var frag = document.createDocumentFragment();
+        var parts = (n.nodeType === 3 ? n.textContent : '').split(/(\s+)/);
+        if (n.nodeType === 3) { parts.forEach(function (p) { if (!p) return; if (/^\s+$/.test(p)) { frag.appendChild(document.createTextNode(p)); return; } var sp = document.createElement('span'); sp.className = 'w'; sp.style.setProperty('--i', k++); sp.textContent = p; frag.appendChild(sp); }); nt.replaceChild(frag, n); }
+        else { n.classList.add('w'); n.style.setProperty('--i', k++); }
+      });
+    }
+    var luz = document.querySelector('[data-luz]');
+    if (luz && !reduce) luz.addEventListener('pointermove', function (e) { var r = luz.getBoundingClientRect(); luz.style.setProperty('--mx', (e.clientX - r.left) + 'px'); luz.style.setProperty('--my', (e.clientY - r.top) + 'px'); });
+    document.querySelectorAll('.section-head h2, .grv-head h2').forEach(function (h) {
+      if (h.querySelector('b')) return; var t = h.textContent.trim().split(' '); if (t.length < 3) return;
+      var last = t.pop(); h.textContent = t.join(' ') + ' '; var b = document.createElement('b'); b.textContent = last; h.appendChild(b);
+    });
+    if (!reduce && matchMedia('(hover: hover)').matches) document.querySelectorAll('.area-card2, .tool, .grv-card').forEach(function (c) {
+      c.setAttribute('data-tilt', '');
+      c.addEventListener('pointermove', function (e) { var r = c.getBoundingClientRect(), x = (e.clientX - r.left) / r.width, y = (e.clientY - r.top) / r.height; c.style.transform = 'perspective(800px) rotateX(' + ((.5 - y) * 7) + 'deg) rotateY(' + ((x - .5) * 9) + 'deg) translateY(-4px)'; c.style.setProperty('--gx', x * 100 + '%'); c.style.setProperty('--gy', y * 100 + '%'); });
+      c.addEventListener('pointerleave', function () { c.style.transform = ''; });
+    });
+  }
+
   var anim = /anim-(surgir|deslizar|paralaxe|contadores)/.exec(body.className);
   if (!anim || reduce || !('IntersectionObserver' in window)) return;
 
   // Entrada dos blocos ao aparecer na tela
-  var sel = '.section-head, .area-row, .tool, .person, .feature, .fact, .principles li, .steps li, .faq details, .gallery-item, .at-panel, .about-aside, .prose-lg, .cta-in > div, .jr-line, .jr-step, .cv-list li, .cv-urg, .ag-step, .ag-sum-card';
-  var els = Array.prototype.slice.call(document.querySelectorAll(sel)).filter(function (el) { return !el.closest('.arc-hero, .hero, .hero-cheio, .hero-editorial, .hero-dividido, .hero-cartao, .lp-hero'); });
+  var sel = '.section-head, .area-row, .tool, .person, .feature, .fact, .principles li, .steps li, .faq details, .gallery-item, .at-panel, .about-aside, .prose-lg, .cta-in > div, .jr-line, .jr-step, .cv-list li, .cv-urg, .ag-step, .ag-sum-card, .grv-card, .igf-post';
+  var els = Array.prototype.slice.call(document.querySelectorAll(sel)).filter(function (el) { return !el.closest('.arc-hero, .nr-hero, .hero, .hero-cheio, .hero-editorial, .hero-dividido, .hero-cartao, .lp-hero'); });
   els.forEach(function (el, i) { el.classList.add('rv'); if (anim[1] === 'deslizar' && i % 2) el.classList.add('rv-dir'); el.style.transitionDelay = ((i % 4) * 70) + 'ms'; });
   var io = new IntersectionObserver(function (entries) {
     entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });

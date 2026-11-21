@@ -1,0 +1,13 @@
+Fotos de demonstração (Unsplash License). Substitua pelas fotos reais do consultório.
+andre.jpg    - Christian Buehner  https://unsplash.com/photos/h0_elok-uKI
+helena.jpg   - Compagnons         https://unsplash.com/photos/jzz_3jWMzHA
+espaco-1.jpg - Jonathan Borba     https://unsplash.com/photos/zrt6kOLREkU
+espaco-2.jpg - Vitaly Gariev      https://unsplash.com/photos/RqR2pnTpmHA
+espaco-3.jpg - Vitaly Gariev      https://unsplash.com/photos/pxy4w-P2wYg
+destaque.jpg - Vitaly Gariev      https://unsplash.com/photos/rG5elqddGzo
+ig-1.jpg     - Costa Live         https://unsplash.com/photos/PO6n1RM_pbY
+ig-2.jpg     - Unseen Studio      https://unsplash.com/photos/s9CC2SKySJM
+ig-3.jpg     - Vitaly Gariev      https://unsplash.com/photos/m-82PNzgFq4
+ig-4.jpg     - Priscilla Du Preez https://unsplash.com/photos/7ilpPBxTavU
+ig-5.jpg     - Afif Ramdhasuma    https://unsplash.com/photos/H8ATMkhYnIo
+ig-6.jpg     - Priscilla Du Preez https://unsplash.com/photos/aPa843frIzI

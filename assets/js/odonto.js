@@ -71,14 +71,14 @@
     }
     function result() {
       var list = Object.keys(score).filter(function (s) { return data.a[s] && score[s] > 0; }).sort(function (a, b) { return score[b] - score[a]; }).slice(0, 3);
-      if (!list.length && data.a['clinica-geral']) list = ['clinica-geral'];
+      if (!list.length) list = Object.keys(data.a).slice(0, 1);
       var max = list.length ? score[list[0]] || 1 : 1;
-      var h = '<div class="quiz-card quiz-res"><p class="quiz-k">Seu resultado</p><h2>Tratamentos relacionados às suas respostas</h2><ol class="quiz-list">';
+      var h = '<div class="quiz-card quiz-res"><p class="quiz-k">Seu resultado</p><h2>' + esc(data.titulo || 'Relacionados às suas respostas') + '</h2><ol class="quiz-list">';
       list.forEach(function (s, i) {
         var a = data.a[s], pct = Math.max(35, Math.round((score[s] || 1) / max * 100));
         h += '<li style="--d:' + i * 120 + 'ms"><div><a href="' + esc(a.url) + '"><strong>' + esc(a.nome) + '</strong></a><p>' + esc(a.resumo) + '</p></div><span class="quiz-bar"><i style="--w:' + pct + '%"></i></span></li>';
       });
-      h += '</ol><div class="quiz-actions"><a class="btn btn-accent btn-lg" href="' + esc(data.agendar) + '">Agendar avaliação</a><button type="button" class="btn btn-outline quiz-again">Refazer o teste</button></div></div>';
+      h += '</ol><div class="quiz-actions"><a class="btn btn-accent btn-lg" href="' + esc(data.agendar) + '">' + esc(data.cta || 'Agendar') + '</a><button type="button" class="btn btn-outline quiz-again">Refazer o teste</button></div></div>';
       stage.innerHTML = h;
     }
     stage.addEventListener('click', function (e) {

@@ -1,0 +1,13 @@
+Fotos de demonstração (Unsplash License). Substitua pelas fotos reais da clínica.
+camila.jpg   - Anna Keibalo       https://unsplash.com/photos/9vH-wWpUP3g
+juliana.jpg  - Jonathan Borba     https://unsplash.com/photos/uBb_ZDIrquc
+espaco-1.jpg - Tim Wing           https://unsplash.com/photos/NTU761-D3i4
+espaco-2.jpg - Rosa Rafael        https://unsplash.com/photos/Pe9IXUuC6QU
+espaco-3.jpg - karelys Ruiz       https://unsplash.com/photos/PqyzuzFiQfY
+destaque.jpg - Look Studio        https://unsplash.com/photos/HtXyytr9304
+ig-1.jpg     - kimia kazemi       https://unsplash.com/photos/RbIcMsh0NSk
+ig-2.jpg     - Anna Keibalo       https://unsplash.com/photos/7kr7_wCNRqc
+ig-3.jpg     - Mayur Roxan        https://unsplash.com/photos/JnsuyfJrxQw
+ig-4.jpg     - Kadarius Seegars   https://unsplash.com/photos/Mxy5gokl8mE
+ig-5.jpg     - kimia kazemi       https://unsplash.com/photos/u93nTfWqR9w
+ig-6.jpg     - Nataliya Melnychuk https://unsplash.com/photos/dFBhXJHKNeo
