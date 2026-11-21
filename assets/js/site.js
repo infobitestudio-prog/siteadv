@@ -123,3 +123,70 @@ window.addEventListener('message', function (e) {
 
 // Ano do rodapé sempre atual (também nas versões estáticas do site)
 document.querySelectorAll('[data-ano]').forEach(function (el) { el.textContent = new Date().getFullYear(); });
+
+// ---------- Modelos: abas, cabeçalho sobreposto, animações ----------
+(function () {
+  var body = document.body;
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Abas das áreas (com teclado: setas esquerda/direita)
+  document.querySelectorAll('[data-abas]').forEach(function (box) {
+    var tabs = Array.prototype.slice.call(box.querySelectorAll('[role=tab]'));
+    function select(t) {
+      tabs.forEach(function (x) {
+        var on = x === t; x.setAttribute('aria-selected', on ? 'true' : 'false'); x.tabIndex = on ? 0 : -1;
+        document.getElementById(x.getAttribute('aria-controls')).hidden = !on;
+      });
+    }
+    tabs.forEach(function (t, i) {
+      t.addEventListener('click', function () { select(t); });
+      t.addEventListener('keydown', function (e) {
+        var j = e.key === 'ArrowRight' || e.key === 'ArrowDown' ? i + 1 : e.key === 'ArrowLeft' || e.key === 'ArrowUp' ? i - 1 : null;
+        if (j === null) return; e.preventDefault(); var n = tabs[(j + tabs.length) % tabs.length]; select(n); n.focus();
+      });
+    });
+  });
+
+  // Cabeçalho transparente que ganha fundo ao rolar
+  if (body.classList.contains('cab-sobreposto') && body.classList.contains('hero-escuro')) {
+    var onScroll = function () { body.classList.toggle('rolou', window.scrollY > 40); };
+    window.addEventListener('scroll', onScroll, { passive: true }); onScroll();
+  }
+
+  var anim = /anim-(surgir|deslizar|paralaxe|contadores)/.exec(body.className);
+  if (!anim || reduce || !('IntersectionObserver' in window)) return;
+
+  // Entrada dos blocos ao aparecer na tela
+  var sel = '.section-head, .area-row, .tool, .person, .feature, .fact, .principles li, .steps li, .faq details, .gallery-item, .at-panel, .about-aside, .prose-lg, .cta-in > div';
+  var els = Array.prototype.slice.call(document.querySelectorAll(sel)).filter(function (el) { return !el.closest('.hero, .hero-cheio, .hero-editorial, .hero-dividido, .hero-cartao, .lp-hero'); });
+  els.forEach(function (el, i) { el.classList.add('rv'); if (anim[1] === 'deslizar' && i % 2) el.classList.add('rv-dir'); el.style.transitionDelay = ((i % 4) * 70) + 'ms'; });
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
+  }, { rootMargin: '0px 0px -8% 0px', threshold: .08 });
+  els.forEach(function (el) { io.observe(el); });
+
+  // Números que contam até o valor (ex.: "15+", "100%")
+  if (anim[1] === 'contadores') {
+    var nums = document.querySelectorAll('.fact strong, [data-contar]');
+    var co = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (!en.isIntersecting) return; co.unobserve(en.target);
+        var el = en.target, m = /^(\D*)(\d+)(.*)$/.exec(el.textContent.trim()); if (!m) return;
+        var end = +m[2], t0 = null;
+        function step(ts) { if (!t0) t0 = ts; var p = Math.min(1, (ts - t0) / 1200), v = Math.round(end * (1 - Math.pow(1 - p, 3))); el.textContent = m[1] + v + m[3]; if (p < 1) requestAnimationFrame(step); }
+        requestAnimationFrame(step);
+      });
+    }, { threshold: .6 });
+    nums.forEach(function (n) { co.observe(n); });
+  }
+
+  // Paralaxe suave no topo
+  if (anim[1] === 'paralaxe') {
+    var layers = document.querySelectorAll('[data-paralaxe]');
+    var tick = false;
+    window.addEventListener('scroll', function () {
+      if (tick) return; tick = true;
+      requestAnimationFrame(function () { var y = window.scrollY; layers.forEach(function (l) { l.style.transform = 'translate3d(0,' + (y * 0.25) + 'px,0)'; }); tick = false; });
+    }, { passive: true });
+  }
+})();
