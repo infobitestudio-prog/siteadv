@@ -243,3 +243,24 @@ a.arc-card:hover { color: var(--ink); box-shadow: 0 26px 46px -22px rgba(0,0,0,.
   .skin-o1 .fact:nth-child(even) { border-left: 1px solid rgba(255,255,255,.12); }
   .skin-o1 .fact strong { font-size: 1.6rem; }
 }
+
+/* Vale-presente e preparo de exames */
+.vp { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; align-items: start; }
+.vp-form { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-lg, 18px); padding: 24px; }
+.vp-card { position: relative; display: grid; gap: 10px; min-height: 300px; padding: 30px; border-radius: 22px; color: #fff; overflow: hidden; background: radial-gradient(400px 260px at 100% 0%, color-mix(in srgb, var(--accent) 70%, transparent), transparent), linear-gradient(140deg, var(--primary), color-mix(in srgb, var(--primary) 70%, var(--accent))); box-shadow: 0 30px 60px -30px var(--primary); transform: rotate(-1.5deg); transition: transform .4s; }
+.vp-card:hover { transform: rotate(0); }
+.vp-card::after { content: ""; position: absolute; right: -40px; bottom: -40px; width: 180px; height: 180px; border: 18px solid rgba(255,255,255,.08); border-radius: 50%; }
+.vp-k { font-size: .75rem; letter-spacing: .2em; text-transform: uppercase; opacity: .75; }
+.vp-to { font: 600 1.7rem/1.15 var(--serif); }
+.vp-card em { font-style: normal; font-weight: 600; color: color-mix(in srgb, var(--accent) 50%, #fff); }
+.vp-card p { margin: 0; opacity: .9; min-height: 3em; }
+.vp-from { font-size: .9rem; opacity: .8; }
+.vp-brand { position: absolute; right: 28px; top: 28px; font-size: .8rem; letter-spacing: .08em; opacity: .85; }
+.vp-send { grid-column: 2; justify-self: start; }
+@media (max-width: 760px) { .vp { grid-template-columns: 1fr; } .vp-send { grid-column: auto; } }
+.prep-list { list-style: none; padding: 0; margin: 18px 0; display: grid; gap: 10px; }
+.prep-list li[hidden] { display: none; }
+.prep-list details { border: 1px solid var(--line); border-radius: 12px; background: var(--surface); padding: 0 18px; }
+.prep-list summary { display: flex; justify-content: space-between; gap: 12px; padding: 16px 0; cursor: pointer; font-weight: 600; color: var(--ink); }
+.prep-list summary small { color: var(--muted); font-weight: 400; }
+.prep-list p { margin: 0 0 16px; color: var(--text); }

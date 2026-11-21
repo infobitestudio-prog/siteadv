@@ -1,0 +1,13 @@
+Fotos de demonstração (Unsplash License). Substitua pelas fotos reais do consultório.
+larissa.jpg  - B Y G             https://unsplash.com/photos/_bKY4f_71lY
+paulo.jpg    - Vitaly Gariev     https://unsplash.com/photos/esdi104xmkc
+espaco-1.jpg - B Y G             https://unsplash.com/photos/5S59aaYQXI0
+espaco-2.jpg - Dan Gold          https://unsplash.com/photos/4_jhDO54BYg
+espaco-3.jpg - Jason Briscoe     https://unsplash.com/photos/KTrov7eujms
+destaque.jpg - B Y G             https://unsplash.com/photos/ntbz4qiuqCA
+ig-1.jpg     - Brooke Lark       https://unsplash.com/photos/jUPOXXRNdcA
+ig-2.jpg     - Brooke Lark       https://unsplash.com/photos/AgD6OBNXF0Q
+ig-3.jpg     - Ashley Winkler    https://unsplash.com/photos/cz4rC-IRfxw
+ig-4.jpg     - Mariana Medvedeva https://unsplash.com/photos/usfIE5Yc7PY
+ig-5.jpg     - Sumit Bhatia      https://unsplash.com/photos/emy9Rhhn2PI
+ig-6.jpg     - Nathan Dumlao     https://unsplash.com/photos/bRdRUUtbxO0

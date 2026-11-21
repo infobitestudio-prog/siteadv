@@ -1,0 +1,31 @@
+Fotos de demonstração (Unsplash License). Substitua pelas fotos reais da imobiliária e dos imóveis.
+marcelo.jpg    - Filip Rankovic Grobgaard        https://unsplash.com/photos/A0rxZczdzz0
+patricia.jpg   - Michael Guertin                 https://unsplash.com/photos/6sYpkD6ifu0
+espaco-1.jpg   - Nastuh Abootalebi               https://unsplash.com/photos/eHD8Y1Znfpk
+espaco-2.jpg   - Vitaly Gariev                   https://unsplash.com/photos/6hb3u7YOFFk
+espaco-3.jpg   - Jakub Żerdzicki                 https://unsplash.com/photos/bqUZEAeWuok
+destaque.jpg   - asd asd                         https://unsplash.com/photos/M_Xd4ddcyNk
+ig-1.jpg       - Franco Debartolo                https://unsplash.com/photos/S5VtKjf4tcM
+ig-2.jpg       - Jake Goossen                    https://unsplash.com/photos/MM7nD2FjI3U
+ig-3.jpg       - Minh Pham                       https://unsplash.com/photos/OtXADkUh3-I
+ig-4.jpg       - Michael Brown                   https://unsplash.com/photos/FKOBTsfL4CY
+ig-5.jpg       - Kate Darmody                    https://unsplash.com/photos/rf52O4FQkZk
+ig-6.jpg       - Spacejoy                        https://unsplash.com/photos/x3mSC1WnWhc
+imovel-1-a.jpg - Huy Nguyen                      https://unsplash.com/photos/ciHrgv7HKZE
+imovel-1-b.jpg - Huy Nguyen                      https://unsplash.com/photos/kb_Q3CLOlzo
+imovel-1-c.jpg - Huy Nguyen                      https://unsplash.com/photos/i9Lp1hd5M-c
+imovel-2-a.jpg - Aquilion Property               https://unsplash.com/photos/NoPzk4m4jHc
+imovel-2-b.jpg - Aquilion Property               https://unsplash.com/photos/qbhF5gOzhVU
+imovel-2-c.jpg - Aquilion Property               https://unsplash.com/photos/KUG5LLnuTbo
+imovel-3-a.jpg - Franco Debartolo                https://unsplash.com/photos/rbxEN33wzik
+imovel-3-b.jpg - Franco Debartolo                https://unsplash.com/photos/CHVx7rw9q0M
+imovel-3-c.jpg - Franco Debartolo                https://unsplash.com/photos/dx8mbdZZRSI
+imovel-4-a.jpg - Aalo Lens                       https://unsplash.com/photos/Ez7fz5mavj0
+imovel-4-b.jpg - Aalo Lens                       https://unsplash.com/photos/k1hCHacaUu0
+imovel-4-c.jpg - Aalo Lens                       https://unsplash.com/photos/-RWieW0kJ1E
+imovel-5-a.jpg - Point3D Commercial Imaging Ltd. https://unsplash.com/photos/5ik6ASwme-U
+imovel-5-b.jpg - Point3D Commercial Imaging Ltd. https://unsplash.com/photos/-Y06eRSvoXg
+imovel-5-c.jpg - Point3D Commercial Imaging Ltd. https://unsplash.com/photos/lpZC09ntvyQ
+imovel-6-a.jpg - Salvo Media LLC                 https://unsplash.com/photos/-atd5-2ciHc
+imovel-6-b.jpg - Salvo Media LLC                 https://unsplash.com/photos/K5O7Cd5gWMY
+imovel-6-c.jpg - Salvo Media LLC                 https://unsplash.com/photos/ylzGfY-xzBY

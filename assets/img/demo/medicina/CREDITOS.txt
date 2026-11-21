@@ -1,0 +1,13 @@
+Fotos de demonstração (Unsplash License). Substitua pelas fotos reais da clínica.
+anabeatriz.jpg - Vitaly Gariev     https://unsplash.com/photos/_zbqco3m7dA
+felipe.jpg     - Vitaly Gariev     https://unsplash.com/photos/XqMo4OlBnh0
+espaco-1.jpg   - Benyamin Bohlouli https://unsplash.com/photos/B_sK_xgzwVA
+espaco-2.jpg   - charlesdeluvio    https://unsplash.com/photos/S5meg_j_W1U
+espaco-3.jpg   - Vitaly Gariev     https://unsplash.com/photos/EVX9pt2dD1o
+destaque.jpg   - Vitaly Gariev     https://unsplash.com/photos/MJmsLpeHPfg
+ig-1.jpg       - Etactics Inc      https://unsplash.com/photos/g3PsF4_y7ZY
+ig-2.jpg       - Luis Melendez     https://unsplash.com/photos/Pd4lRfKo16U
+ig-3.jpg       - Markus Frieauff   https://unsplash.com/photos/IJ0KiXl4uys
+ig-4.jpg       - Vitaly Gariev     https://unsplash.com/photos/8WYkI3cEZm8
+ig-5.jpg       - Vitaly Gariev     https://unsplash.com/photos/VAvkPtF4HJI
+ig-6.jpg       - Vitaly Gariev     https://unsplash.com/photos/dlkeCHsagmU

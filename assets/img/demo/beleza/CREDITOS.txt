@@ -1,0 +1,13 @@
+Fotos de demonstração (Unsplash License). Substitua pelas fotos reais do salão.
+bruna.jpg    - Adam Winger        https://unsplash.com/photos/ZsUbK9zSgMo
+diego.jpg    - Ernest Flowers     https://unsplash.com/photos/SveuQqvPN6Y
+espaco-1.jpg - Benyamin Bohlouli  https://unsplash.com/photos/LGXN4OSQSa4
+espaco-2.jpg - Nathon Oski        https://unsplash.com/photos/EW_rqoSdDes
+espaco-3.jpg - Victor Sirbu       https://unsplash.com/photos/TGdKH24tX7I
+destaque.jpg - Adam Winger        https://unsplash.com/photos/WXmHwPcFamo
+ig-1.jpg     - Ionela Mat         https://unsplash.com/photos/lps3FolQ6Ro
+ig-2.jpg     - Mr Shave           https://unsplash.com/photos/4k60yfGy7fU
+ig-3.jpg     - Patrícia Hellinger https://unsplash.com/photos/Y14F-1vzVds
+ig-4.jpg     - Jenna Oslin        https://unsplash.com/photos/MmDO1-ezCE4
+ig-5.jpg     - Gulom Nazarov      https://unsplash.com/photos/DrG4V5skbMY
+ig-6.jpg     - Courtney Spittle   https://unsplash.com/photos/I-RBO6p7Czw

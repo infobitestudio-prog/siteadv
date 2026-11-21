@@ -1,0 +1,13 @@
+Fotos de demonstração (Unsplash License). Substitua pelas fotos reais do estúdio.
+lucas.jpg    - Derick McKinney https://unsplash.com/photos/bBuUjB98PPY
+renata.jpg   - Jose Borrero    https://unsplash.com/photos/Jhzw6fBskX0
+espaco-1.jpg - Ahmet Kurt      https://unsplash.com/photos/2sXYx7sd-kg
+espaco-2.jpg - Sincerely Media https://unsplash.com/photos/wGFibXDQlBI
+espaco-3.jpg - Ahmet Kurt      https://unsplash.com/photos/-MLRlIgtPYU
+destaque.jpg - yury kirillov   https://unsplash.com/photos/pbUWW-CBoqY
+ig-1.jpg     - ROXANA POPOVICI https://unsplash.com/photos/cZ0WYsBFHhs
+ig-2.jpg     - Caroline Badran https://unsplash.com/photos/m56-PAdMhM0
+ig-3.jpg     - Sincerely Media https://unsplash.com/photos/mvHuY-t4QII
+ig-4.jpg     - Dane Wetton     https://unsplash.com/photos/AkSJQnem75Y
+ig-5.jpg     - Julius Toltesi  https://unsplash.com/photos/ZzkNkbUxFMc
+ig-6.jpg     - Jan Suchánek    https://unsplash.com/photos/Mlnt5avLxaY
