@@ -3,472 +3,215 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>30 modelos de site para advocacia</title>
-<meta name="description" content="Escolha entre 30 modelos de site para escritórios de advocacia. Todos com painel, calculadoras jurídicas, landing page e assistente de textos.">
-<link rel="stylesheet" href="assets/css/modelos.css">
+<title>Sites profissionais por segmento | Infobite</title>
+<meta name="description" content="Sites prontos para advocacia, odontologia, estética, contabilidade e psicologia. Escolha o segmento, veja as áreas e os modelos.">
+<meta name="theme-color" content="#0b1220">
+<link rel="preload" href="assets/fonts/sora-600.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:Sora;src:url("assets/fonts/sora-600.woff2") format("woff2");font-weight:400 700;font-display:swap}
+@font-face{font-family:"DM Sans";src:url("assets/fonts/dm-sans-400.woff2") format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"DM Sans";src:url("assets/fonts/dm-sans-600.woff2") format("woff2");font-weight:500 600;font-display:swap}
+:root{--bg:#0b1220;--bg2:#111a2e;--ink:#f3f5fa;--mut:#9aa6bf;--line:rgba(255,255,255,.1);--a:#7c9cff;--b:#3ee0b5;--c:#ff8f6b;--card:rgba(255,255,255,.04)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.02rem/1.6 "DM Sans",system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit}
+.w{width:min(100% - 32px,1200px);margin-inline:auto}
+h1,h2,h3{font-family:Sora,system-ui,sans-serif;letter-spacing:-.035em;line-height:1.05;margin:0}
+.ico{width:22px;height:22px;flex:none}
+/* topo */
+.top{position:relative;padding:28px 0 0}
+.top-in{display:flex;justify-content:space-between;align-items:center}
+.logo{display:flex;align-items:center;gap:10px;font:600 1.05rem Sora;text-decoration:none}
+.logo i{width:30px;height:30px;border-radius:9px;background:conic-gradient(from 200deg,var(--a),var(--b),var(--c),var(--a));display:block;animation:spin 8s linear infinite}
+@keyframes spin{to{filter:hue-rotate(360deg)}}
+.top a.cta{padding:10px 18px;border-radius:999px;border:1px solid var(--line);text-decoration:none;font-size:.92rem;transition:background .2s}
+.top a.cta:hover{background:rgba(255,255,255,.08)}
+.hero{position:relative;padding:clamp(60px,10vw,130px) 0 clamp(40px,6vw,70px);text-align:center;isolation:isolate}
+.mesh{position:absolute;inset:-20% -10% 0;z-index:-1;filter:blur(70px);opacity:.55}
+.mesh span{position:absolute;border-radius:50%;animation:drift 16s ease-in-out infinite alternate}
+.mesh span:nth-child(1){width:42vw;height:42vw;left:8%;top:0;background:var(--a)}
+.mesh span:nth-child(2){width:34vw;height:34vw;right:6%;top:10%;background:var(--b);animation-delay:-5s}
+.mesh span:nth-child(3){width:28vw;height:28vw;left:40%;top:30%;background:var(--c);opacity:.6;animation-delay:-9s}
+@keyframes drift{to{transform:translate(6vw,4vw) scale(1.15)}}
+.grain{position:absolute;inset:0;z-index:-1;background-image:radial-gradient(rgba(255,255,255,.07) 1px,transparent 1px);background-size:22px 22px;mask-image:radial-gradient(ellipse at center,#000 20%,transparent 70%)}
+.kick{display:inline-flex;gap:8px;align-items:center;padding:7px 14px;border-radius:999px;background:rgba(255,255,255,.07);border:1px solid var(--line);font-size:.86rem;color:var(--mut);margin-bottom:26px;animation:up .8s both}
+.kick b{width:8px;height:8px;border-radius:50%;background:var(--b);box-shadow:0 0 12px var(--b)}
+.hero h1{font-size:clamp(2.4rem,6vw,5.2rem);max-width:13em;margin-inline:auto;animation:up .9s .1s both}
+.hero h1 em{font-style:normal;background:linear-gradient(90deg,var(--a),var(--b),var(--c),var(--a));background-size:300% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:flow 8s linear infinite}
+@keyframes flow{to{background-position:300% 0}}
+.hero p.l{max-width:40em;margin:22px auto 0;color:var(--mut);font-size:clamp(1.02rem,1.2vw,1.18rem);animation:up .9s .2s both}
+@keyframes up{from{opacity:0;transform:translateY(24px)}}
+.search{position:relative;max-width:560px;margin:36px auto 0;animation:up .9s .3s both}
+.search input{width:100%;padding:18px 22px 18px 54px;border-radius:999px;border:1px solid rgba(255,255,255,.16);background:rgba(10,16,30,.6);backdrop-filter:blur(10px);color:var(--ink);font:inherit;font-size:1.02rem;outline:none;transition:border-color .2s,box-shadow .2s}
+.search input:focus{border-color:var(--a);box-shadow:0 0 0 4px rgba(124,156,255,.18)}
+.search>.ico{position:absolute;left:20px;top:50%;transform:translateY(-50%);color:var(--mut)}
+.results{position:absolute;left:0;right:0;top:calc(100% + 8px);background:#131d33;border:1px solid var(--line);border-radius:18px;padding:8px;text-align:left;z-index:10;max-height:340px;overflow:auto;box-shadow:0 30px 60px -20px #000}
+.results[hidden]{display:none}
+.results button{display:flex;width:100%;align-items:center;gap:12px;padding:10px 12px;border:0;border-radius:12px;background:none;color:var(--ink);font:inherit;cursor:pointer;text-align:left}
+.results button:hover,.results button.on{background:rgba(255,255,255,.07)}
+.results small{margin-left:auto;color:var(--mut);font-size:.8rem;white-space:nowrap}
+.results mark{background:none;color:var(--b);font-weight:600}
+.results p{margin:8px 12px;color:var(--mut)}
+.stats{display:flex;justify-content:center;gap:clamp(24px,6vw,72px);margin-top:46px;animation:up .9s .4s both}
+.stats strong{display:block;font:600 clamp(1.8rem,3vw,2.6rem)/1 Sora}
+.stats span{color:var(--mut);font-size:.88rem}
+/* segmentos */
+.seg{padding:30px 0 90px}
+.tabs{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+.tab{position:relative;display:grid;gap:10px;padding:20px;border-radius:20px;border:1px solid var(--line);background:var(--card);color:var(--ink);font:inherit;text-align:left;cursor:pointer;overflow:hidden;transition:transform .3s,border-color .3s,background .3s;animation:up .7s both;animation-delay:calc(var(--i)*80ms + 400ms)}
+.tab::before{content:"";position:absolute;inset:0;background:radial-gradient(400px 160px at var(--mx,50%) 0,rgba(124,156,255,.22),transparent 70%);opacity:0;transition:opacity .3s}
+.tab:hover{transform:translateY(-4px);border-color:rgba(255,255,255,.22)}
+.tab:hover::before,.tab[aria-selected=true]::before{opacity:1}
+.tab[aria-selected=true]{border-color:var(--a);background:rgba(124,156,255,.08)}
+.tab .ti{width:46px;height:46px;border-radius:14px;display:grid;place-items:center;background:linear-gradient(135deg,rgba(124,156,255,.25),rgba(62,224,181,.18));color:#fff}
+.tab h3{font-size:1.15rem}
+.tab small{color:var(--mut);font-size:.84rem}
+.tab .badge{position:absolute;top:16px;right:16px;font-size:.7rem;text-transform:uppercase;letter-spacing:.08em;padding:4px 9px;border-radius:999px;background:rgba(62,224,181,.15);color:var(--b)}
+.tab .badge.soon{background:rgba(255,143,107,.14);color:var(--c)}
+.panel{margin-top:22px;border-radius:28px;border:1px solid var(--line);background:linear-gradient(160deg,rgba(255,255,255,.05),rgba(255,255,255,.015));padding:clamp(22px,4vw,48px);display:grid;grid-template-columns:1.25fr 1fr;gap:clamp(24px,4vw,56px);min-height:440px}
+.panel h2{font-size:clamp(1.8rem,3vw,2.8rem)}
+.panel .res{color:var(--mut);margin:12px 0 22px;max-width:34em}
+.feat{list-style:none;padding:0;margin:0 0 26px;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.feat li{display:flex;gap:10px;align-items:flex-start;font-size:.93rem}
+.feat li::before{content:"";flex:none;width:18px;height:18px;margin-top:2px;border-radius:50%;background:var(--b) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230b1220' stroke-width='3'%3E%3Cpath d='M6 12.5l4 4 8-9'/%3E%3C/svg%3E") center/12px no-repeat}
+.lbl{font-size:.76rem;text-transform:uppercase;letter-spacing:.12em;color:var(--mut);margin:0 0 12px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;max-height:260px;overflow:auto;padding-right:4px}
+.chip{display:inline-flex;align-items:center;gap:7px;padding:7px 13px;border-radius:999px;background:rgba(255,255,255,.06);border:1px solid var(--line);font-size:.86rem;animation:pop .4s both;animation-delay:calc(var(--i)*22ms)}
+.chip .ico{width:15px;height:15px;color:var(--b)}
+.chip.hit{border-color:var(--b);background:rgba(62,224,181,.14)}
+@keyframes pop{from{opacity:0;transform:translateY(8px) scale(.94)}}
+.go{display:inline-flex;align-items:center;gap:10px;margin-top:28px;padding:15px 26px;border-radius:999px;background:linear-gradient(90deg,var(--a),var(--b));color:#0b1220;font-weight:600;text-decoration:none;transition:transform .2s,box-shadow .2s;box-shadow:0 14px 30px -12px rgba(62,224,181,.5)}
+.go:hover{transform:translateY(-2px)}
+.go.off{background:rgba(255,255,255,.08);color:var(--mut);box-shadow:none;pointer-events:none}
+.stack{position:relative;align-self:center;height:100%;min-height:320px}
+.stack .imgs{position:absolute;inset:0}.stack img,.stack .ph{position:absolute;width:82%;aspect-ratio:16/10;object-fit:cover;object-position:top;border-radius:16px;border:1px solid rgba(255,255,255,.14);box-shadow:0 30px 60px -20px #000;transition:transform .6s cubic-bezier(.2,.7,.2,1),opacity .4s;background:#1a2440}
+.imgs>*:nth-child(1){left:0;top:12%;transform:rotate(-6deg);z-index:1}
+.imgs>*:nth-child(2){left:9%;top:4%;transform:rotate(-1deg);z-index:2}
+.imgs>*:nth-child(3){right:0;top:0;transform:rotate(4deg);z-index:3}
+.stack:hover .imgs>*:nth-child(1){transform:rotate(-10deg) translate(-16px,10px)}
+.stack:hover .imgs>*:nth-child(3){transform:rotate(8deg) translate(16px,-6px)}
+.imgs.n1>*{left:8%!important;top:12%!important;transform:rotate(-2deg)!important;width:86%}.stack .ph{display:grid;place-items:center;color:var(--mut);font:600 1rem Sora;left:9%;top:10%;transform:rotate(-2deg);background:repeating-linear-gradient(135deg,rgba(255,255,255,.04) 0 12px,transparent 12px 24px),#141e36}
+.stack .count{position:absolute;right:4%;bottom:6%;z-index:4;padding:12px 18px;border-radius:16px;background:rgba(11,18,32,.85);backdrop-filter:blur(8px);border:1px solid var(--line)}
+.stack .count strong{font:600 1.8rem/1 Sora;display:block}
+.stack .count span{color:var(--mut);font-size:.82rem}
+.fade{animation:fd .5s both}@keyframes fd{from{opacity:0;transform:translateY(12px)}}
+.foot{border-top:1px solid var(--line);padding:28px 0;color:var(--mut);font-size:.88rem}
+.foot .w{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.foot a{text-decoration:none}.foot a:hover{color:var(--ink)}
+@media(max-width:980px){.tabs{grid-template-columns:repeat(3,1fr)}.panel{grid-template-columns:1fr}.stack{min-height:260px;max-width:520px}}
+@media(max-width:620px){.tabs{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:6px}.tab{flex:0 0 66%;scroll-snap-align:start}.feat{grid-template-columns:1fr}.stats{gap:20px}}
+@media(prefers-reduced-motion:reduce){*,*::before{animation:none!important;transition:none!important}}
+</style>
 </head>
 <body>
-<header class="mg-head">
-  <div class="mg-wrap">
-    <p class="mg-kicker">Sites para escritórios de advocacia</p>
-    <h1>Escolha o modelo do seu site</h1>
-    <p class="mg-lead">São 30 modelos com estruturas diferentes. Todos têm o mesmo painel, as calculadoras jurídicas, a landing page para anúncios, o perfil de cada advogado com o selo da OAB e o assistente de textos com IA. Depois de escolher, as cores, os textos e as fotos são ajustados para o seu escritório.</p>
+<header class="top"><div class="w top-in">
+  <a class="logo" href="https://infobitestudio.com.br/" target="_blank" rel="noopener"><i aria-hidden="true"></i>Infobite Sites</a>
+  <a class="cta" href="#segmentos">Ver segmentos</a>
+</div></header>
+<section class="hero">
+  <div class="mesh" aria-hidden="true"><span></span><span></span><span></span></div><div class="grain" aria-hidden="true"></div>
+  <div class="w">
+    <p class="kick"><b></b> 31 modelos prontos · painel completo · IA de textos</p>
+    <h1>O site profissional certo para <em>cada segmento</em></h1>
+    <p class="l">Escolha o seu segmento, veja todas as áreas atendidas e os modelos disponíveis. Cada site já vem com painel, ferramentas próprias da profissão e textos dentro das regras do conselho.</p>
+    <div class="search">
+      <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="M20 20l-4.2-4.2"/></svg>      <input type="search" id="q" placeholder="Procure uma área: implante, trabalhista, clareamento..." autocomplete="off" aria-label="Procurar área de atuação" aria-controls="res">
+      <div class="results" id="res" hidden role="listbox"></div>
+    </div>
+    <div class="stats">
+      <div><strong data-n="5">5</strong><span>segmentos</span></div>
+      <div><strong data-n="31">31</strong><span>modelos</span></div>
+      <div><strong data-n="95">95</strong><span>áreas mapeadas</span></div>
+    </div>
   </div>
-</header>
-<main class="mg-wrap">
-  <ol class="mg-grid">
-          <li class="mg-card">
-        <a class="mg-thumb" href="m/01/" target="_blank" rel="noopener">
-          <picture><source srcset="assets/img/modelos/01.webp" type="image/webp"><img src="assets/img/modelos/01.jpg" alt="Prévia do modelo 01, Toga" loading="lazy" width="720" height="450"></picture>
-          <span class="mg-num">01</span>
-        </a>
-        <div class="mg-body">
-          <h2><span>Modelo 01</span> Toga</h2>
-          <p>O modelo original: sóbrio, com a advogada em destaque e as áreas em lista.</p>
-          <ul class="mg-tags"><li>Foto do advogado</li><li>Áreas em lista</li><li>Equipe em destaque</li><li>Sem animação</li></ul>
-          <div class="mg-colors" aria-hidden="true"><i style="background:#1a2130"></i><i style="background:#9c1c33"></i><i style="background:#f6f7f7"></i></div>
-          <div class="mg-actions">
-            <a class="mg-btn" href="m/01/" target="_blank" rel="noopener">Ver modelo 01</a>
-                      </div>
-        </div>
-      </li>
-          <li class="mg-card">
-        <a class="mg-thumb" href="m/02/" target="_blank" rel="noopener">
-          <picture><source srcset="assets/img/modelos/02.webp" type="image/webp"><img src="assets/img/modelos/02.jpg" alt="Prévia do modelo 02, Sumário" loading="lazy" width="720" height="450"></picture>
-          <span class="mg-num">02</span>
-        </a>
-        <div class="mg-body">
-          <h2><span>Modelo 02</span> Sumário</h2>
-          <p>Topo com índice das áreas, como um código comentado. Ideal para escritórios com muitas áreas.</p>
-          <ul class="mg-tags"><li>Sumário de áreas</li><li>Áreas numeradas</li><li>Equipe em círculos</li><li>Animação suave</li></ul>
-          <div class="mg-colors" aria-hidden="true"><i style="background:#13232a"></i><i style="background:#1f6f78"></i><i style="background:#f4f7f7"></i></div>
-          <div class="mg-actions">
-            <a class="mg-btn" href="m/02/" target="_blank" rel="noopener">Ver modelo 02</a>
-                      </div>
-        </div>
-      </li>
-          <li class="mg-card">
-        <a class="mg-thumb" href="m/03/" target="_blank" rel="noopener">
-          <picture><source srcset="assets/img/modelos/03.webp" type="image/webp"><img src="assets/img/modelos/03.jpg" alt="Prévia do modelo 03, Horizonte" loading="lazy" width="720" height="450"></picture>
-          <span class="mg-num">03</span>
-        </a>
-        <div class="mg-body">
-          <h2><span>Modelo 03</span> Horizonte</h2>
-          <p>Foto em tela cheia com texto centralizado e cabeçalho transparente.</p>
-          <ul class="mg-tags"><li>Topo em tela cheia</li><li>Áreas em cartões</li><li>Equipe em carrossel</li><li>Paralaxe</li></ul>
-          <div class="mg-colors" aria-hidden="true"><i style="background:#0f1e2e"></i><i style="background:#2f6fd6"></i><i style="background:#f5f7fb"></i></div>
-          <div class="mg-actions">
-            <a class="mg-btn" href="m/03/" target="_blank" rel="noopener">Ver modelo 03</a>
-                      </div>
-        </div>
-      </li>
-          <li class="mg-card">
-        <a class="mg-thumb" href="m/04/" target="_blank" rel="noopener">
-          <picture><source srcset="assets/img/modelos/04.webp" type="image/webp"><img src="assets/img/modelos/04.jpg" alt="Prévia do modelo 04, Tribuna" loading="lazy" width="720" height="450"></picture>
-          <span class="mg-num">04</span>
-        </a>
-        <div class="mg-body">
-          <h2><span>Modelo 04</span> Tribuna</h2>
-          <p>Tipografia grande e faixa de áreas em movimento. Visual de revista.</p>
-          <ul class="mg-tags"><li>Tipografia grande</li><li>Áreas em abas</li><li>Equipe em destaque</li><li>Animação suave</li></ul>
-          <div class="mg-colors" aria-hidden="true"><i style="background:#1b1714"></i><i style="background:#b4462c"></i><i style="background:#f8f5f0"></i></div>
-          <div class="mg-actions">
-            <a class="mg-btn" href="m/04/" target="_blank" rel="noopener">Ver modelo 04</a>
-                      </div>
-        </div>
-      </li>
-          <li class="mg-card">
-        <a class="mg-thumb" href="m/05/" target="_blank" rel="noopener">
-          <picture><source srcset="assets/img/modelos/05.webp" type="image/webp"><img src="assets/img/modelos/05.jpg" alt="Prévia do modelo 05, Coluna" loading="lazy" width="720" height="450"></picture>
-          <span class="mg-num">05</span>
-        </a>
-        <div class="mg-body">
-          <h2><span>Modelo 05</span> Coluna</h2>
-          <p>Metade em cor sólida, metade com a foto do advogado. Forte e direto.</p>
-          <ul class="mg-tags"><li>Topo dividido</li><li>Áreas em mosaico</li><li>Equipe em círculos</li><li>Animação lateral</li></ul>
-          <div class="mg-colors" aria-hidden="true"><i style="background:#0e2a24"></i><i style="background:#c9a227"></i><i style="background:#f6f6f1"></i></div>
-          <div class="mg-actions">
-            <a class="mg-btn" href="m/05/" target="_blank" rel="noopener">Ver modelo 05</a>
-                      </div>
-        </div>
-      </li>
-          <li class="mg-card">
-        <a class="mg-thumb" href="m/06/" target="_blank" rel="noopener">
-          <picture><source srcset="assets/img/modelos/06.webp" type="image/webp"><img src="assets/img/modelos/06.jpg" alt="Prévia do modelo 06, Acolhida" loading="lazy" width="720" height="450"></picture>
-          <span class="mg-num">06</span>
-        </a>
-        <div class="mg-body">
-          <h2><span>Modelo 06</span> Acolhida</h2>
-          <p>Cantos arredondados, cores claras e linguagem próxima. Ótimo para família e consumidor.</p>
-          <ul class="mg-tags"><li>Topo em cartão</li><li>Áreas em cartões</li><li>Equipe em círculos</li><li>Animação suave</li></ul>
-          <div class="mg-colors" aria-hidden="true"><i style="background:#2d3a4a"></i><i style="background:#d0705a"></i><i style="background:#fbf8f5"></i></div>
-          <div class="mg-actions">
-            <a class="mg-btn" href="m/06/" target="_blank" rel="noopener">Ver modelo 06</a>
-                      </div>
-        </div>
-      </li>
-          <li class="mg-card">
-        <a class="mg-thumb" href="m/07/" target="_blank" rel="noopener">
-          <picture><source srcset="assets/img/modelos/07.webp" type="image/webp"><img src="assets/img/modelos/07.jpg" alt="Prévia do modelo 07, Pórtico" loading="lazy" width="720" height="450"></picture>
-          <span class="mg-num">07</span>
-        </a>
-        <div class="mg-body">
-          <h2><span>Modelo 07</span> Pórtico</h2>
-          <p>Cabeçalho centralizado e foto ampla. Clássico e institucional.</p>
-          <ul class="mg-tags"><li>Topo em tela cheia</li><li>Áreas em lista</li><li>Equipe em destaque</li><li>Paralaxe</li></ul>
-          <div class="mg-colors" aria-hidden="true"><i style="background:#1c1a17"></i><i style="background:#8a6d3b"></i><i style="background:#f7f5f0"></i></div>
-          <div class="mg-actions">
-            <a class="mg-btn" href="m/07/" target="_blank" rel="noopener">Ver modelo 07</a>
-                      </div>
-        </div>
-      </li>
-          <li class="mg-card">
-        <a class="mg-thumb" href="m/08/" target="_blank" rel="noopener">
-          <picture><source srcset="assets/img/modelos/08.webp" type="image/webp"><img src="assets/img/modelos/08.jpg" alt="Prévia do modelo 08, Prisma" loading="lazy" width="720" height="450"></picture>
-          <span class="mg-num">08</span>
-        </a>
-        <div class="mg-body">
-          <h2><span>Modelo 08</span> Prisma</h2>
-          <p>Degradê vibrante e formas suaves. Moderno, para escritórios digitais.</p>
-          <ul class="mg-tags"><li>Topo em tela cheia</li><li>Áreas em mosaico</li><li>Equipe em carrossel</li><li>Números animados</li></ul>
-          <div class="mg-colors" aria-hidden="true"><i style="background:#1b1446"></i><i style="background:#6d3df5"></i><i style="background:#f6f5fb"></i></div>
-          <div class="mg-actions">
-            <a class="mg-btn" href="m/08/" target="_blank" rel="noopener">Ver modelo 08</a>
-                      </div>
-        </div>
-      </li>
-          <li class="mg-card">
-        <a class="mg-thumb" href="m/09/" target="_blank" rel="noopener">
-          <picture><source srcset="assets/img/modelos/09.webp" type="image/webp"><img src="assets/img/modelos/09.jpg" alt="Prévia do modelo 09, Arquivo" loading="lazy" width="720" height="450"></picture>
-          <span class="mg-num">09</span>
-        </a>
-        <div class="mg-body">
-          <h2><span>Modelo 09</span> Arquivo</h2>
-          <p>Áreas numeradas e visual de documento técnico. Sério e organizado.</p>
-          <ul class="mg-tags"><li>Sumário de áreas</li><li>Áreas numeradas</li><li>Equipe em destaque</li><li>Sem animação</li></ul>
-          <div class="mg-colors" aria-hidden="true"><i style="background:#20242a"></i><i style="background:#3a6a4f"></i><i style="background:#f5f6f4"></i></div>
-          <div class="mg-actions">
-            <a class="mg-btn" href="m/09/" target="_blank" rel="noopener">Ver modelo 09</a>
-                      </div>
-        </div>
-      </li>
-          <li class="mg-card">
-        <a class="mg-thumb" href="m/10/" target="_blank" rel="noopener">
-          <picture><source srcset="assets/img/modelos/10.webp" type="image/webp"><img src="assets/img/modelos/10.jpg" alt="Prévia do modelo 10, Selo" loading="lazy" width="720" height="450"></picture>
-          <span class="mg-num">10</span>
-        </a>
-        <div class="mg-body">
-          <h2><span>Modelo 10</span> Selo</h2>
-          <p>O selo da OAB e o advogado no centro da página inicial.</p>
-          <ul class="mg-tags"><li>Foto do advogado</li><li>Áreas em abas</li><li>Equipe em círculos</li><li>Animação suave</li></ul>
-          <div class="mg-colors" aria-hidden="true"><i style="background:#14213d"></i><i style="background:#a07c3b"></i><i style="background:#f7f6f2"></i></div>
-          <div class="mg-actions">
-            <a class="mg-btn" href="m/10/" target="_blank" rel="noopener">Ver modelo 10</a>
-                      </div>
-        </div>
-      </li>
-          <li class="mg-card">
-        <a class="mg-thumb" href="m/11/" target="_blank" rel="noopener">
-          <picture><source srcset="assets/img/modelos/11.webp" type="image/webp"><img src="assets/img/modelos/11.jpg" alt="Prévia do modelo 11, Atlântico" loading="lazy" width="720" height="450"></picture>
-          <span class="mg-num">11</span>
-        </a>
-        <div class="mg-body">
-          <h2><span>Modelo 11</span> Atlântico</h2>
-          <p>Azul petróleo, foto em tela cheia e números animados.</p>
-          <ul class="mg-tags"><li>Topo em tela cheia</li><li>Áreas em cartões</li><li>Equipe em destaque</li><li>Números animados</li></ul>
-          <div class="mg-colors" aria-hidden="true"><i style="background:#0b2540"></i><i style="background:#0e7fa3"></i><i style="background:#f3f7fa"></i></div>
-          <div class="mg-actions">
-            <a class="mg-btn" href="m/11/" target="_blank" rel="noopener">Ver modelo 11</a>
-                      </div>
-        </div>
-      </li>
-          <li class="mg-card">
-        <a class="mg-thumb" href="m/12/" target="_blank" rel="noopener">
-          <picture><source srcset="assets/img/modelos/12.webp" type="image/webp"><img src="assets/img/modelos/12.jpg" alt="Prévia do modelo 12, Manifesto" loading="lazy" width="720" height="450"></picture>
-          <span class="mg-num">12</span>
-        </a>
-        <div class="mg-body">
-          <h2><span>Modelo 12</span> Manifesto</h2>
-          <p>Frase de abertura em letras enormes. Para quem quer impacto.</p>
-          <ul class="mg-tags"><li>Tipografia grande</li><li>Áreas em mosaico</li><li>Equipe em carrossel</li><li>Animação lateral</li></ul>
-          <div class="mg-colors" aria-hidden="true"><i style="background:#111317"></i><i style="background:#e0453a"></i><i style="background:#f4f2ee"></i></div>
-          <div class="mg-actions">
-            <a class="mg-btn" href="m/12/" target="_blank" rel="noopener">Ver modelo 12</a>
-                      </div>
-        </div>
-      </li>
-          <li class="mg-card">
-        <a class="mg-thumb" href="m/13/" target="_blank" rel="noopener">
-          <picture><source srcset="assets/img/modelos/13.webp" type="image/webp"><img src="assets/img/modelos/13.jpg" alt="Prévia do modelo 13, Jardim" loading="lazy" width="720" height="450"></picture>
-          <span class="mg-num">13</span>
-        </a>
-        <div class="mg-body">
-          <h2><span>Modelo 13</span> Jardim</h2>
-          <p>Verde, arredondado e acolhedor. Indicado para ambiental, agrário e família.</p>
-          <ul class="mg-tags"><li>Topo em cartão</li><li>Áreas em cartões</li><li>Equipe em círculos</li><li>Animação suave</li></ul>
-          <div class="mg-colors" aria-hidden="true"><i style="background:#1d3b2a"></i><i style="background:#4f8a3c"></i><i style="background:#f5f8f2"></i></div>
-          <div class="mg-actions">
-            <a class="mg-btn" href="m/13/" target="_blank" rel="noopener">Ver modelo 13</a>
-                      </div>
-        </div>
-      </li>
-          <li class="mg-card">
-        <a class="mg-thumb" href="m/14/" target="_blank" rel="noopener">
-          <picture><source srcset="assets/img/modelos/14.webp" type="image/webp"><img src="assets/img/modelos/14.jpg" alt="Prévia do modelo 14, Ônix" loading="lazy" width="720" height="450"></picture>
-          <span class="mg-num">14</span>
-        </a>
-        <div class="mg-body">
-          <h2><span>Modelo 14</span> Ônix</h2>
-          <p>Fundo escuro com detalhes dourados. Sofisticado.</p>
-          <ul class="mg-tags"><li>Topo dividido</li><li>Áreas em lista</li><li>Equipe em destaque</li><li>Paralaxe</li></ul>
-          <div class="mg-colors" aria-hidden="true"><i style="background:#0b0e13"></i><i style="background:#c9a227"></i><i style="background:#12161d"></i></div>
-          <div class="mg-actions">
-            <a class="mg-btn" href="m/14/" target="_blank" rel="noopener">Ver modelo 14</a>
-                      </div>
-        </div>
-      </li>
-          <li class="mg-card">
-        <a class="mg-thumb" href="m/15/" target="_blank" rel="noopener">
-          <picture><source srcset="assets/img/modelos/15.webp" type="image/webp"><img src="assets/img/modelos/15.jpg" alt="Prévia do modelo 15, Praça" loading="lazy" width="720" height="450"></picture>
-          <span class="mg-num">15</span>
-        </a>
-        <div class="mg-body">
-          <h2><span>Modelo 15</span> Praça</h2>
-          <p>Cabeçalho com faixa de contato e áreas em abas. Prático para o cliente.</p>
-          <ul class="mg-tags"><li>Foto do advogado</li><li>Áreas em abas</li><li>Equipe em carrossel</li><li>Animação suave</li></ul>
-          <div class="mg-colors" aria-hidden="true"><i style="background:#1f2a44"></i><i style="background:#e2683c"></i><i style="background:#f7f7f9"></i></div>
-          <div class="mg-actions">
-            <a class="mg-btn" href="m/15/" target="_blank" rel="noopener">Ver modelo 15</a>
-                      </div>
-        </div>
-      </li>
-          <li class="mg-card">
-        <a class="mg-thumb" href="m/16/" target="_blank" rel="noopener">
-          <picture><source srcset="assets/img/modelos/16.webp" type="image/webp"><img src="assets/img/modelos/16.jpg" alt="Prévia do modelo 16, Pauta" loading="lazy" width="720" height="450"></picture>
-          <span class="mg-num">16</span>
-        </a>
-        <div class="mg-body">
-          <h2><span>Modelo 16</span> Pauta</h2>
-          <p>Visual de jornal moderno, com tipografia serifada e índice.</p>
-          <ul class="mg-tags"><li>Sumário de áreas</li><li>Áreas em lista</li><li>Equipe em círculos</li><li>Animação lateral</li></ul>
-          <div class="mg-colors" aria-hidden="true"><i style="background:#191919"></i><i style="background:#1f5fae"></i><i style="background:#fafaf7"></i></div>
-          <div class="mg-actions">
-            <a class="mg-btn" href="m/16/" target="_blank" rel="noopener">Ver modelo 16</a>
-                      </div>
-        </div>
-      </li>
-          <li class="mg-card">
-        <a class="mg-thumb" href="m/17/" target="_blank" rel="noopener">
-          <picture><source srcset="assets/img/modelos/17.webp" type="image/webp"><img src="assets/img/modelos/17.jpg" alt="Prévia do modelo 17, Vértice" loading="lazy" width="720" height="450"></picture>
-          <span class="mg-num">17</span>
-        </a>
-        <div class="mg-body">
-          <h2><span>Modelo 17</span> Vértice</h2>
-          <p>Composição dividida e geometria limpa. Para empresarial e tributário.</p>
-          <ul class="mg-tags"><li>Topo dividido</li><li>Áreas numeradas</li><li>Equipe em carrossel</li><li>Números animados</li></ul>
-          <div class="mg-colors" aria-hidden="true"><i style="background:#0f1b2d"></i><i style="background:#2563eb"></i><i style="background:#f5f7fa"></i></div>
-          <div class="mg-actions">
-            <a class="mg-btn" href="m/17/" target="_blank" rel="noopener">Ver modelo 17</a>
-                      </div>
-        </div>
-      </li>
-          <li class="mg-card">
-        <a class="mg-thumb" href="m/18/" target="_blank" rel="noopener">
-          <picture><source srcset="assets/img/modelos/18.webp" type="image/webp"><img src="assets/img/modelos/18.jpg" alt="Prévia do modelo 18, Ateliê" loading="lazy" width="720" height="450"></picture>
-          <span class="mg-num">18</span>
-        </a>
-        <div class="mg-body">
-          <h2><span>Modelo 18</span> Ateliê</h2>
-          <p>Cartão central arredondado com equipe à mostra. Escritórios boutique.</p>
-          <ul class="mg-tags"><li>Topo em cartão</li><li>Áreas em mosaico</li><li>Equipe em círculos</li><li>Animação suave</li></ul>
-          <div class="mg-colors" aria-hidden="true"><i style="background:#2a1620"></i><i style="background:#7b2240"></i><i style="background:#f8f5f6"></i></div>
-          <div class="mg-actions">
-            <a class="mg-btn" href="m/18/" target="_blank" rel="noopener">Ver modelo 18</a>
-                      </div>
-        </div>
-      </li>
-          <li class="mg-card">
-        <a class="mg-thumb" href="m/19/" target="_blank" rel="noopener">
-          <picture><source srcset="assets/img/modelos/19.webp" type="image/webp"><img src="assets/img/modelos/19.jpg" alt="Prévia do modelo 19, Farol" loading="lazy" width="720" height="450"></picture>
-          <span class="mg-num">19</span>
-        </a>
-        <div class="mg-body">
-          <h2><span>Modelo 19</span> Farol</h2>
-          <p>Foto ampla, cabeçalho transparente e chamada forte para contato.</p>
-          <ul class="mg-tags"><li>Topo em tela cheia</li><li>Áreas em abas</li><li>Equipe em destaque</li><li>Paralaxe</li></ul>
-          <div class="mg-colors" aria-hidden="true"><i style="background:#1a1a2e"></i><i style="background:#f2a541"></i><i style="background:#f7f6f3"></i></div>
-          <div class="mg-actions">
-            <a class="mg-btn" href="m/19/" target="_blank" rel="noopener">Ver modelo 19</a>
-                      </div>
-        </div>
-      </li>
-          <li class="mg-card">
-        <a class="mg-thumb" href="m/20/" target="_blank" rel="noopener">
-          <picture><source srcset="assets/img/modelos/20.webp" type="image/webp"><img src="assets/img/modelos/20.jpg" alt="Prévia do modelo 20, Código" loading="lazy" width="720" height="450"></picture>
-          <span class="mg-num">20</span>
-        </a>
-        <div class="mg-body">
-          <h2><span>Modelo 20</span> Código</h2>
-          <p>Fundo escuro, verde e linhas finas. Para direito digital, LGPD e startups.</p>
-          <ul class="mg-tags"><li>Tipografia grande</li><li>Áreas numeradas</li><li>Equipe em círculos</li><li>Animação suave</li></ul>
-          <div class="mg-colors" aria-hidden="true"><i style="background:#0d1117"></i><i style="background:#2ea043"></i><i style="background:#0d1117"></i></div>
-          <div class="mg-actions">
-            <a class="mg-btn" href="m/20/" target="_blank" rel="noopener">Ver modelo 20</a>
-                      </div>
-        </div>
-      </li>
-          <li class="mg-card">
-        <a class="mg-thumb" href="m/21/" target="_blank" rel="noopener">
-          <picture><source srcset="assets/img/modelos/21.webp" type="image/webp"><img src="assets/img/modelos/21.jpg" alt="Prévia do modelo 21, Raiz" loading="lazy" width="720" height="450"></picture>
-          <span class="mg-num">21</span>
-        </a>
-        <div class="mg-body">
-          <h2><span>Modelo 21</span> Raiz</h2>
-          <p>Tons terrosos, foto do advogado e cantos suaves.</p>
-          <ul class="mg-tags"><li>Foto do advogado</li><li>Áreas em cartões</li><li>Equipe em carrossel</li><li>Animação lateral</li></ul>
-          <div class="mg-colors" aria-hidden="true"><i style="background:#2b1d17"></i><i style="background:#a5532f"></i><i style="background:#faf7f4"></i></div>
-          <div class="mg-actions">
-            <a class="mg-btn" href="m/21/" target="_blank" rel="noopener">Ver modelo 21</a>
-                      </div>
-        </div>
-      </li>
-          <li class="mg-card">
-        <a class="mg-thumb" href="m/22/" target="_blank" rel="noopener">
-          <picture><source srcset="assets/img/modelos/22.webp" type="image/webp"><img src="assets/img/modelos/22.jpg" alt="Prévia do modelo 22, Capital" loading="lazy" width="720" height="450"></picture>
-          <span class="mg-num">22</span>
-        </a>
-        <div class="mg-body">
-          <h2><span>Modelo 22</span> Capital</h2>
-          <p>Azul royal, números em destaque e mosaico de áreas. Corporativo.</p>
-          <ul class="mg-tags"><li>Topo em cartão</li><li>Áreas em mosaico</li><li>Equipe em destaque</li><li>Números animados</li></ul>
-          <div class="mg-colors" aria-hidden="true"><i style="background:#0f1e4a"></i><i style="background:#2445c4"></i><i style="background:#f4f6fb"></i></div>
-          <div class="mg-actions">
-            <a class="mg-btn" href="m/22/" target="_blank" rel="noopener">Ver modelo 22</a>
-                      </div>
-        </div>
-      </li>
-          <li class="mg-card">
-        <a class="mg-thumb" href="m/23/" target="_blank" rel="noopener">
-          <picture><source srcset="assets/img/modelos/23.webp" type="image/webp"><img src="assets/img/modelos/23.jpg" alt="Prévia do modelo 23, Brisa" loading="lazy" width="720" height="450"></picture>
-          <span class="mg-num">23</span>
-        </a>
-        <div class="mg-body">
-          <h2><span>Modelo 23</span> Brisa</h2>
-          <p>Leve e claro, com degradê suave e muito respiro.</p>
-          <ul class="mg-tags"><li>Topo em tela cheia</li><li>Áreas em lista</li><li>Equipe em círculos</li><li>Animação suave</li></ul>
-          <div class="mg-colors" aria-hidden="true"><i style="background:#16324f"></i><i style="background:#3aa0c8"></i><i style="background:#f6fafc"></i></div>
-          <div class="mg-actions">
-            <a class="mg-btn" href="m/23/" target="_blank" rel="noopener">Ver modelo 23</a>
-                      </div>
-        </div>
-      </li>
-          <li class="mg-card">
-        <a class="mg-thumb" href="m/24/" target="_blank" rel="noopener">
-          <picture><source srcset="assets/img/modelos/24.webp" type="image/webp"><img src="assets/img/modelos/24.jpg" alt="Prévia do modelo 24, Biblioteca" loading="lazy" width="720" height="450"></picture>
-          <span class="mg-num">24</span>
-        </a>
-        <div class="mg-body">
-          <h2><span>Modelo 24</span> Biblioteca</h2>
-          <p>Serifa clássica, sumário das áreas e equipe em destaque.</p>
-          <ul class="mg-tags"><li>Sumário de áreas</li><li>Áreas em abas</li><li>Equipe em destaque</li><li>Sem animação</li></ul>
-          <div class="mg-colors" aria-hidden="true"><i style="background:#241b13"></i><i style="background:#7a4b2a"></i><i style="background:#f7f3ec"></i></div>
-          <div class="mg-actions">
-            <a class="mg-btn" href="m/24/" target="_blank" rel="noopener">Ver modelo 24</a>
-                      </div>
-        </div>
-      </li>
-          <li class="mg-card">
-        <a class="mg-thumb" href="m/25/" target="_blank" rel="noopener">
-          <picture><source srcset="assets/img/modelos/25.webp" type="image/webp"><img src="assets/img/modelos/25.jpg" alt="Prévia do modelo 25, Pulso" loading="lazy" width="720" height="450"></picture>
-          <span class="mg-num">25</span>
-        </a>
-        <div class="mg-body">
-          <h2><span>Modelo 25</span> Pulso</h2>
-          <p>Contraste alto, vermelho intenso e animações de entrada.</p>
-          <ul class="mg-tags"><li>Tipografia grande</li><li>Áreas em cartões</li><li>Equipe em carrossel</li><li>Animação lateral</li></ul>
-          <div class="mg-colors" aria-hidden="true"><i style="background:#121212"></i><i style="background:#d7263d"></i><i style="background:#f5f5f5"></i></div>
-          <div class="mg-actions">
-            <a class="mg-btn" href="m/25/" target="_blank" rel="noopener">Ver modelo 25</a>
-                      </div>
-        </div>
-      </li>
-          <li class="mg-card">
-        <a class="mg-thumb" href="m/26/" target="_blank" rel="noopener">
-          <picture><source srcset="assets/img/modelos/26.webp" type="image/webp"><img src="assets/img/modelos/26.jpg" alt="Prévia do modelo 26, Mirante" loading="lazy" width="720" height="450"></picture>
-          <span class="mg-num">26</span>
-        </a>
-        <div class="mg-body">
-          <h2><span>Modelo 26</span> Mirante</h2>
-          <p>Metade foto, metade texto, com cabeçalho centralizado.</p>
-          <ul class="mg-tags"><li>Topo dividido</li><li>Áreas em abas</li><li>Equipe em círculos</li><li>Paralaxe</li></ul>
-          <div class="mg-colors" aria-hidden="true"><i style="background:#1e2a38"></i><i style="background:#5b8c85"></i><i style="background:#f4f7f6"></i></div>
-          <div class="mg-actions">
-            <a class="mg-btn" href="m/26/" target="_blank" rel="noopener">Ver modelo 26</a>
-                      </div>
-        </div>
-      </li>
-          <li class="mg-card">
-        <a class="mg-thumb" href="m/27/" target="_blank" rel="noopener">
-          <picture><source srcset="assets/img/modelos/27.webp" type="image/webp"><img src="assets/img/modelos/27.jpg" alt="Prévia do modelo 27, Grafite" loading="lazy" width="720" height="450"></picture>
-          <span class="mg-num">27</span>
-        </a>
-        <div class="mg-body">
-          <h2><span>Modelo 27</span> Grafite</h2>
-          <p>Monocromático, elegante e silencioso.</p>
-          <ul class="mg-tags"><li>Sumário de áreas</li><li>Áreas em lista</li><li>Equipe em destaque</li><li>Animação suave</li></ul>
-          <div class="mg-colors" aria-hidden="true"><i style="background:#1d1d1f"></i><i style="background:#55565c"></i><i style="background:#f5f5f6"></i></div>
-          <div class="mg-actions">
-            <a class="mg-btn" href="m/27/" target="_blank" rel="noopener">Ver modelo 27</a>
-                      </div>
-        </div>
-      </li>
-          <li class="mg-card">
-        <a class="mg-thumb" href="m/28/" target="_blank" rel="noopener">
-          <picture><source srcset="assets/img/modelos/28.webp" type="image/webp"><img src="assets/img/modelos/28.jpg" alt="Prévia do modelo 28, Aurora" loading="lazy" width="720" height="450"></picture>
-          <span class="mg-num">28</span>
-        </a>
-        <div class="mg-body">
-          <h2><span>Modelo 28</span> Aurora</h2>
-          <p>Degradê roxo e rosa em todo o site. Marcante nas redes sociais.</p>
-          <ul class="mg-tags"><li>Topo em cartão</li><li>Áreas em mosaico</li><li>Equipe em carrossel</li><li>Números animados</li></ul>
-          <div class="mg-colors" aria-hidden="true"><i style="background:#2a1035"></i><i style="background:#d0503f"></i><i style="background:#fbf7f5"></i></div>
-          <div class="mg-actions">
-            <a class="mg-btn" href="m/28/" target="_blank" rel="noopener">Ver modelo 28</a>
-                      </div>
-        </div>
-      </li>
-          <li class="mg-card">
-        <a class="mg-thumb" href="m/29/" target="_blank" rel="noopener">
-          <picture><source srcset="assets/img/modelos/29.webp" type="image/webp"><img src="assets/img/modelos/29.jpg" alt="Prévia do modelo 29, Âncora" loading="lazy" width="720" height="450"></picture>
-          <span class="mg-num">29</span>
-        </a>
-        <div class="mg-body">
-          <h2><span>Modelo 29</span> Âncora</h2>
-          <p>Azul marinho, faixa de contato e áreas numeradas. Confiável.</p>
-          <ul class="mg-tags"><li>Topo dividido</li><li>Áreas numeradas</li><li>Equipe em destaque</li><li>Animação suave</li></ul>
-          <div class="mg-colors" aria-hidden="true"><i style="background:#0c1f3a"></i><i style="background:#c8102e"></i><i style="background:#f5f6f8"></i></div>
-          <div class="mg-actions">
-            <a class="mg-btn" href="m/29/" target="_blank" rel="noopener">Ver modelo 29</a>
-                      </div>
-        </div>
-      </li>
-          <li class="mg-card">
-        <a class="mg-thumb" href="m/30/" target="_blank" rel="noopener">
-          <picture><source srcset="assets/img/modelos/30.webp" type="image/webp"><img src="assets/img/modelos/30.jpg" alt="Prévia do modelo 30, Essencial" loading="lazy" width="720" height="450"></picture>
-          <span class="mg-num">30</span>
-        </a>
-        <div class="mg-body">
-          <h2><span>Modelo 30</span> Essencial</h2>
-          <p>Minimalista: menos elementos, mais clareza. Carrega muito rápido.</p>
-          <ul class="mg-tags"><li>Tipografia grande</li><li>Áreas em lista</li><li>Equipe em círculos</li><li>Sem animação</li></ul>
-          <div class="mg-colors" aria-hidden="true"><i style="background:#1a1a1a"></i><i style="background:#1a1a1a"></i><i style="background:#ffffff"></i></div>
-          <div class="mg-actions">
-            <a class="mg-btn" href="m/30/" target="_blank" rel="noopener">Ver modelo 30</a>
-                      </div>
-        </div>
-      </li>
-      </ol>
-</main>
-<footer class="mg-foot"><div class="mg-wrap">Os textos, fotos e o escritório "Silva &amp; Associados" são apenas demonstração. Nomes e números de OAB são fictícios.</div></footer>
+</section>
+<section class="seg" id="segmentos"><div class="w">
+  <div class="tabs" role="tablist" aria-label="Segmentos">
+          <button class="tab" role="tab" type="button" data-id="advocacia" aria-selected="true" aria-controls="painel" style="--i:0">
+        <span class="badge ">30 modelos</span>
+        <span class="ti"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18M7 21h10M5 7h14"/><path d="M5 7l-3 7a3 3 0 0 0 6 0L5 7zM19 7l-3 7a3 3 0 0 0 6 0l-3-7z"/></svg></span>
+        <h3>Advocacia</h3>
+        <small>23 áreas</small>
+      </button>
+          <button class="tab" role="tab" type="button" data-id="odontologia" aria-selected="false" aria-controls="painel" style="--i:1">
+        <span class="badge ">1 modelo</span>
+        <span class="ti"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.5 3.5c-2.5 0-4 2-4 4.5 0 2 .8 3.4 1.4 5 .7 2 .8 4.6 1.6 6.4.5 1.2 1.9 1.3 2.4 0 .6-1.6.8-4.4 3.1-4.4s2.5 2.8 3.1 4.4c.5 1.3 1.9 1.2 2.4 0 .8-1.8.9-4.4 1.6-6.4.6-1.6 1.4-3 1.4-5 0-2.5-1.5-4.5-4-4.5-1.8 0-2.6 1-4.5 1s-2.7-1-4.5-1z"/></svg></span>
+        <h3>Odontologia</h3>
+        <small>24 áreas</small>
+      </button>
+          <button class="tab" role="tab" type="button" data-id="estetica" aria-selected="false" aria-controls="painel" style="--i:2">
+        <span class="badge soon">Em breve</span>
+        <span class="ti"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8L12 3z"/><path d="M19 16l.8 2.2L22 19l-2.2.8L19 22l-.8-2.2L16 19l2.2-.8L19 16z"/></svg></span>
+        <h3>Estética</h3>
+        <small>16 áreas</small>
+      </button>
+          <button class="tab" role="tab" type="button" data-id="contabilidade" aria-selected="false" aria-controls="painel" style="--i:3">
+        <span class="badge soon">Em breve</span>
+        <span class="ti"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 6-6"/><path d="M16 8h4v4"/></svg></span>
+        <h3>Contabilidade</h3>
+        <small>16 áreas</small>
+      </button>
+          <button class="tab" role="tab" type="button" data-id="psicologia" aria-selected="false" aria-controls="painel" style="--i:4">
+        <span class="badge soon">Em breve</span>
+        <span class="ti"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7.5-4.6-9.2-9.4C1.6 7 4 4 7.2 4c2 0 3.6 1.1 4.8 2.8C13.2 5.1 14.8 4 16.8 4 20 4 22.4 7 21.2 10.6 19.5 15.4 12 20 12 20z"/><path d="M8 11h2l1.5-2 2 4 1.5-2h2"/></svg></span>
+        <h3>Psicologia</h3>
+        <small>16 áreas</small>
+      </button>
+      </div>
+  <div class="panel" id="painel" role="tabpanel" aria-live="polite"></div>
+</div></section>
+<footer class="foot"><div class="w"><span>Demonstração com conteúdo fictício.</span><a href="https://infobitestudio.com.br/" target="_blank" rel="noopener">Desenvolvido pelo grupo <strong>Infobite</strong></a></div></footer>
+<script>
+(function () {
+  var D = {"advocacia":{"nome":"Advocacia","icone":"scale","resumo":"Sites para escritórios e advogados, com calculadoras jurídicas e selo da OAB.","breve":false,"modelos":30,"areas":[["Família e Sucessões","users"],["Direito do Trabalho","briefcase"],["Direito Previdenciário","shield"],["Direito Civil","scale"],["Direito do Consumidor","cart"],["Direito Imobiliário","building"],["Direito Penal","gavel"],["Direito Empresarial","chart"],["Direito Tributário","coins"],["Contratos","file"],["Direito Digital e LGPD","laptop"],["Direito Bancário","bank"],["Direito à Saúde","heart"],["Direito Administrativo","landmark"],["Direito Condominial","key"],["Direito Ambiental","leaf"],["Direito Agrário e Agronegócio","wheat"],["Direito de Trânsito","car"],["Propriedade Intelectual","bulb"],["Direito Internacional e Migratório","globe"],["Direito Eleitoral","vote"],["Direito Militar","star"],["Direito Desportivo","trophy"]],"feat":["Calculadoras jurídicas","Selo da OAB conferido","Landing page por área","Textos com IA dentro das regras da OAB"],"thumbs":["assets/img/modelos/01.webp","assets/img/modelos/02.webp","assets/img/modelos/03.webp"],"url":"advocacia/"},"odontologia":{"nome":"Odontologia","icone":"tooth","resumo":"Sites para clínicas e dentistas, com agendamento, avaliação on-line, simuladores e selo do CRO.","breve":false,"modelos":1,"areas":[["Clínica geral e prevenção","tooth"],["Ortodontia e alinhadores","aligner"],["Implantes dentários","implant"],["Estética dental","smile"],["Clareamento dental","sparkle"],["Tratamento de canal","root"],["Gengiva (periodontia)","gum"],["Odontopediatria","child"],["Prótese dentária","crown"],["Cirurgia oral","scalpel"],["Harmonização orofacial","face"],["DTM e dor na mandíbula","jaw"],["Ronco e apneia do sono","moon"],["Restaurações","tooth"],["Diagnóstico por imagem","xray"],["Estomatologia","search"],["Odontogeriatria","users"],["Pacientes com necessidades especiais","heart"],["Bruxismo","shield"],["Urgência odontológica","clock"],["Sedação consciente","cloud"],["Odontologia do esporte","trophy"],["Halitose","cloud"],["Laserterapia","bolt"]],"feat":["Agendamento com horários livres","Avaliação on-line com fotos","Simuladores de clareamento e parcelamento","Botão de urgência 24h e selo do CRO"],"thumbs":["assets/img/modelos/odontologia/01.webp"],"url":"odontologia/"},"estetica":{"nome":"Estética","icone":"sparkle","resumo":"Clínicas de estética e bem-estar, com agendamento e avaliação on-line.","breve":true,"modelos":0,"areas":[["Limpeza de pele","sparkle"],["Peeling","sparkle"],["Microagulhamento","sparkle"],["Depilação a laser","sparkle"],["Drenagem linfática","sparkle"],["Massagem modeladora","sparkle"],["Radiofrequência","sparkle"],["Criolipólise","sparkle"],["Tratamento de manchas","sparkle"],["Tratamento de acne","sparkle"],["Design de sobrancelhas","sparkle"],["Micropigmentação","sparkle"],["Bioestimuladores","sparkle"],["Skincare personalizado","sparkle"],["Estética corporal","sparkle"],["Pós-operatório","sparkle"]],"feat":["Agendamento on-line","Avaliação com fotos","Pacotes e protocolos","Selo do conselho profissional"],"thumbs":[],"url":""},"contabilidade":{"nome":"Contabilidade","icone":"chart","resumo":"Escritórios de contabilidade e consultoria, com simuladores de impostos.","breve":true,"modelos":0,"areas":[["Abertura de empresas","chart"],["Contabilidade para MEI","chart"],["Simples Nacional","chart"],["Lucro Presumido e Real","chart"],["Departamento pessoal","chart"],["Folha de pagamento","chart"],["Imposto de Renda Pessoa Física","chart"],["Planejamento tributário","chart"],["Consultoria fiscal","chart"],["Regularização de empresas","chart"],["Encerramento de empresas","chart"],["Contabilidade para médicos","chart"],["Contabilidade para e-commerce","chart"],["BPO financeiro","chart"],["Holding familiar","chart"],["Certificado digital","chart"]],"feat":["Simulador de impostos","Comparativo de regimes","Portal de documentos","Abertura de empresa on-line"],"thumbs":[],"url":""},"psicologia":{"nome":"Psicologia","icone":"heart","resumo":"Psicólogos e clínicas de saúde mental, com atendimento on-line e agendamento.","breve":true,"modelos":0,"areas":[["Psicoterapia individual","heart"],["Terapia de casal","heart"],["Terapia familiar","heart"],["Psicologia infantil","heart"],["Adolescentes","heart"],["Ansiedade","heart"],["Depressão","heart"],["Terapia cognitivo-comportamental","heart"],["Psicanálise","heart"],["Orientação profissional","heart"],["Avaliação psicológica","heart"],["Neuropsicologia","heart"],["Luto","heart"],["Atendimento on-line","heart"],["Psicologia organizacional","heart"],["TDAH e autismo","heart"]],"feat":["Agendamento on-line","Atendimento por vídeo","Teste de bem-estar","Selo do CRP e sigilo reforçado"],"thumbs":[],"url":""}};
+  var I = {"scale":"\u003Csvg class=\"ico\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"\u003E\u003Cpath d=\"M12 3v18M7 21h10M5 7h14\"/\u003E\u003Cpath d=\"M5 7l-3 7a3 3 0 0 0 6 0L5 7zM19 7l-3 7a3 3 0 0 0 6 0l-3-7z\"/\u003E\u003C/svg\u003E","users":"\u003Csvg class=\"ico\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"\u003E\u003Ccircle cx=\"9\" cy=\"8\" r=\"3.5\"/\u003E\u003Cpath d=\"M2.5 20a6.5 6.5 0 0 1 13 0\"/\u003E\u003Ccircle cx=\"17\" cy=\"9\" r=\"2.5\"/\u003E\u003Cpath d=\"M17.5 14a5 5 0 0 1 4 5\"/\u003E\u003C/svg\u003E","briefcase":"\u003Csvg class=\"ico\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"\u003E\u003Crect x=\"3\" y=\"7\" width=\"18\" height=\"13\" rx=\"2\"/\u003E\u003Cpath d=\"M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2M3 13h18\"/\u003E\u003C/svg\u003E","shield":"\u003Csvg class=\"ico\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"\u003E\u003Cpath d=\"M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6l8-3z\"/\u003E\u003Cpath d=\"M8.5 12l2.5 2.5 4.5-5\"/\u003E\u003C/svg\u003E","cart":"\u003Csvg class=\"ico\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"\u003E\u003Ccircle cx=\"9\" cy=\"20\" r=\"1.5\"/\u003E\u003Ccircle cx=\"18\" cy=\"20\" r=\"1.5\"/\u003E\u003Cpath d=\"M2 3h3l2.5 12h11.5l2-8H6\"/\u003E\u003C/svg\u003E","building":"\u003Csvg class=\"ico\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"\u003E\u003Crect x=\"4\" y=\"3\" width=\"16\" height=\"18\" rx=\"1\"/\u003E\u003Cpath d=\"M8 7h2M14 7h2M8 11h2M14 11h2M8 15h2M14 15h2M10 21v-3h4v3\"/\u003E\u003C/svg\u003E","gavel":"\u003Csvg class=\"ico\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"\u003E\u003Cpath d=\"M14 4l6 6M11 7l6 6M12.5 5.5l-5 5 4 4 5-5M9.5 12.5L3 19l2 2 6.5-6.5M13 21h8\"/\u003E\u003C/svg\u003E","chart":"\u003Csvg class=\"ico\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"\u003E\u003Cpath d=\"M3 3v18h18\"/\u003E\u003Cpath d=\"M7 15l4-4 3 3 6-6\"/\u003E\u003Cpath d=\"M16 8h4v4\"/\u003E\u003C/svg\u003E","coins":"\u003Csvg class=\"ico\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"\u003E\u003Cellipse cx=\"9\" cy=\"7\" rx=\"6\" ry=\"3\"/\u003E\u003Cpath d=\"M3 7v4c0 1.7 2.7 3 6 3s6-1.3 6-3V7\"/\u003E\u003Cpath d=\"M3 11v4c0 1.7 2.7 3 6 3 1 0 2-.1 2.8-.4\"/\u003E\u003Ccircle cx=\"17\" cy=\"16\" r=\"4\"/\u003E\u003C/svg\u003E","file":"\u003Csvg class=\"ico\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"\u003E\u003Cpath d=\"M14 3H6a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V8l-5-5z\"/\u003E\u003Cpath d=\"M14 3v5h5M8.5 13h7M8.5 17h5\"/\u003E\u003C/svg\u003E","laptop":"\u003Csvg class=\"ico\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"\u003E\u003Crect x=\"4\" y=\"5\" width=\"16\" height=\"11\" rx=\"1.5\"/\u003E\u003Cpath d=\"M2 19h20\"/\u003E\u003Cpath d=\"M10 9l-2 2 2 2M14 9l2 2-2 2\"/\u003E\u003C/svg\u003E","bank":"\u003Csvg class=\"ico\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"\u003E\u003Cpath d=\"M3 9l9-5 9 5M4 9h16M5 9v9M9.5 9v9M14.5 9v9M19 9v9M3 21h18M3 18h18\"/\u003E\u003C/svg\u003E","heart":"\u003Csvg class=\"ico\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"\u003E\u003Cpath d=\"M12 20s-7.5-4.6-9.2-9.4C1.6 7 4 4 7.2 4c2 0 3.6 1.1 4.8 2.8C13.2 5.1 14.8 4 16.8 4 20 4 22.4 7 21.2 10.6 19.5 15.4 12 20 12 20z\"/\u003E\u003Cpath d=\"M8 11h2l1.5-2 2 4 1.5-2h2\"/\u003E\u003C/svg\u003E","landmark":"\u003Csvg class=\"ico\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"\u003E\u003Cpath d=\"M12 3l9 5H3l9-5zM5 10v8M10 10v8M14 10v8M19 10v8M3 21h18\"/\u003E\u003C/svg\u003E","key":"\u003Csvg class=\"ico\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"\u003E\u003Ccircle cx=\"8\" cy=\"15\" r=\"4\"/\u003E\u003Cpath d=\"M11 12l9-9M17 6l3 3M14.5 8.5l2 2\"/\u003E\u003C/svg\u003E","leaf":"\u003Csvg class=\"ico\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"\u003E\u003Cpath d=\"M5 19C5 10 10 5 20 4c-.5 10-5.5 15-14 15\"/\u003E\u003Cpath d=\"M5 19l8-8\"/\u003E\u003C/svg\u003E","wheat":"\u003Csvg class=\"ico\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"\u003E\u003Cpath d=\"M12 22V8\"/\u003E\u003Cpath d=\"M12 12c-2.5 0-4-1.5-4-4 2.5 0 4 1.5 4 4zM12 12c2.5 0 4-1.5 4-4-2.5 0-4 1.5-4 4zM12 17c-2.5 0-4-1.5-4-4 2.5 0 4 1.5 4 4zM12 17c2.5 0 4-1.5 4-4-2.5 0-4 1.5-4 4zM12 7c-1.4-1-1.4-3 0-4 1.4 1 1.4 3 0 4z\"/\u003E\u003C/svg\u003E","car":"\u003Csvg class=\"ico\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"\u003E\u003Cpath d=\"M5 16V11l2-5h10l2 5v5\"/\u003E\u003Crect x=\"3\" y=\"11\" width=\"18\" height=\"6\" rx=\"1.5\"/\u003E\u003Ccircle cx=\"7.5\" cy=\"14\" r=\"1\"/\u003E\u003Ccircle cx=\"16.5\" cy=\"14\" r=\"1\"/\u003E\u003Cpath d=\"M5 17v2M19 17v2\"/\u003E\u003C/svg\u003E","bulb":"\u003Csvg class=\"ico\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"\u003E\u003Cpath d=\"M9 18h6M10 21h4\"/\u003E\u003Cpath d=\"M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z\"/\u003E\u003C/svg\u003E","globe":"\u003Csvg class=\"ico\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"\u003E\u003Ccircle cx=\"12\" cy=\"12\" r=\"9\"/\u003E\u003Cpath d=\"M3 12h18M12 3c2.5 2.5 3.8 5.5 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.5-3.8-9S9.5 5.5 12 3z\"/\u003E\u003C/svg\u003E","vote":"\u003Csvg class=\"ico\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"\u003E\u003Cpath d=\"M4 12h16v8H4zM8 12V5h8v7\"/\u003E\u003Cpath d=\"M10 8.5l1.5 1.5 3-3\"/\u003E\u003C/svg\u003E","star":"\u003Csvg class=\"ico\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"\u003E\u003Cpath d=\"M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9L12 3z\"/\u003E\u003C/svg\u003E","trophy":"\u003Csvg class=\"ico\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"\u003E\u003Cpath d=\"M8 4h8v5a4 4 0 0 1-8 0V4z\"/\u003E\u003Cpath d=\"M8 6H5a3 3 0 0 0 3 4M16 6h3a3 3 0 0 1-3 4M12 13v4M8 21h8M9 17h6v4H9z\"/\u003E\u003C/svg\u003E","tooth":"\u003Csvg class=\"ico\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"\u003E\u003Cpath d=\"M7.5 3.5c-2.5 0-4 2-4 4.5 0 2 .8 3.4 1.4 5 .7 2 .8 4.6 1.6 6.4.5 1.2 1.9 1.3 2.4 0 .6-1.6.8-4.4 3.1-4.4s2.5 2.8 3.1 4.4c.5 1.3 1.9 1.2 2.4 0 .8-1.8.9-4.4 1.6-6.4.6-1.6 1.4-3 1.4-5 0-2.5-1.5-4.5-4-4.5-1.8 0-2.6 1-4.5 1s-2.7-1-4.5-1z\"/\u003E\u003C/svg\u003E","aligner":"\u003Csvg class=\"ico\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"\u003E\u003Cpath d=\"M3 10c0-3 4-5 9-5s9 2 9 5c0 4-4 8-9 8s-9-4-9-8z\"/\u003E\u003Cpath d=\"M6 10.5h12M8 8v5M12 7.5v6M16 8v5\"/\u003E\u003C/svg\u003E","implant":"\u003Csvg class=\"ico\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"\u003E\u003Cpath d=\"M8 3h8c0 3-1.5 5-4 5S8 6 8 3z\"/\u003E\u003Cpath d=\"M9 10h6M9.5 13h5M10 16h4M10.5 19h3M12 8v13\"/\u003E\u003C/svg\u003E","smile":"\u003Csvg class=\"ico\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"\u003E\u003Ccircle cx=\"12\" cy=\"12\" r=\"9\"/\u003E\u003Cpath d=\"M7.5 13.5c1.2 2 2.7 3 4.5 3s3.3-1 4.5-3\"/\u003E\u003Cpath d=\"M9 9.5h.01M15 9.5h.01\"/\u003E\u003C/svg\u003E","sparkle":"\u003Csvg class=\"ico\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"\u003E\u003Cpath d=\"M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8L12 3z\"/\u003E\u003Cpath d=\"M19 16l.8 2.2L22 19l-2.2.8L19 22l-.8-2.2L16 19l2.2-.8L19 16z\"/\u003E\u003C/svg\u003E","root":"\u003Csvg class=\"ico\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"\u003E\u003Cpath d=\"M6 4c0 3 1 4 1 7 0 4 1 9 3 9 1 0 1-3 2-3s1 3 2 3c2 0 3-5 3-9 0-3 1-4 1-7\"/\u003E\u003Cpath d=\"M6 4h12M10 9v6M14 9v6\"/\u003E\u003C/svg\u003E","gum":"\u003Csvg class=\"ico\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"\u003E\u003Cpath d=\"M3 9c3-3 15-3 18 0v3c-3 2-15 2-18 0V9z\"/\u003E\u003Cpath d=\"M7 13v4c0 1.5 2 1.5 2 0v-4M11 13.5v4.5c0 1.5 2 1.5 2 0v-4.5M15 13v4c0 1.5 2 1.5 2 0v-4\"/\u003E\u003C/svg\u003E","child":"\u003Csvg class=\"ico\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"\u003E\u003Ccircle cx=\"12\" cy=\"6\" r=\"3\"/\u003E\u003Cpath d=\"M8 21v-6l-3-3M16 21v-6l3-3M8 12h8v4H8z\"/\u003E\u003C/svg\u003E","crown":"\u003Csvg class=\"ico\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"\u003E\u003Cpath d=\"M3 8l4 4 5-7 5 7 4-4-2 11H5L3 8z\"/\u003E\u003Cpath d=\"M5 19h14\"/\u003E\u003C/svg\u003E","scalpel":"\u003Csvg class=\"ico\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"\u003E\u003Cpath d=\"M3 21l9-9M12 12l6-8 3 3-8 6\"/\u003E\u003Cpath d=\"M10 14l-2-2\"/\u003E\u003C/svg\u003E","face":"\u003Csvg class=\"ico\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"\u003E\u003Cpath d=\"M12 3c-4 0-7 3-7 8 0 5 3 10 7 10s7-5 7-10c0-5-3-8-7-8z\"/\u003E\u003Cpath d=\"M9 10h.01M15 10h.01M9.5 15c1.5 1 3.5 1 5 0\"/\u003E\u003C/svg\u003E","jaw":"\u003Csvg class=\"ico\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"\u003E\u003Cpath d=\"M4 6c0 7 3 13 8 13s8-6 8-13\"/\u003E\u003Cpath d=\"M4 6l3 2M20 6l-3 2M9 13h6\"/\u003E\u003Ccircle cx=\"12\" cy=\"6\" r=\"1\"/\u003E\u003C/svg\u003E","moon":"\u003Csvg class=\"ico\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"\u003E\u003Cpath d=\"M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z\"/\u003E\u003C/svg\u003E","xray":"\u003Csvg class=\"ico\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"\u003E\u003Crect x=\"3\" y=\"4\" width=\"18\" height=\"16\" rx=\"2\"/\u003E\u003Cpath d=\"M8 9c0 3 1 6 2 6s1-2 2-2 1 2 2 2 2-3 2-6M8 9h8\"/\u003E\u003C/svg\u003E","search":"\u003Csvg class=\"ico\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"\u003E\u003Ccircle cx=\"11\" cy=\"11\" r=\"6.5\"/\u003E\u003Cpath d=\"M20 20l-4.2-4.2\"/\u003E\u003C/svg\u003E","clock":"\u003Csvg class=\"ico\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"\u003E\u003Ccircle cx=\"12\" cy=\"12\" r=\"9\"/\u003E\u003Cpath d=\"M12 7v5l3 2\"/\u003E\u003C/svg\u003E","cloud":"\u003Csvg class=\"ico\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"\u003E\u003Cpath d=\"M7 18a4.5 4.5 0 0 1-.6-9A6 6 0 0 1 18 9.5a4 4 0 0 1-.5 8.5H7z\"/\u003E\u003C/svg\u003E","bolt":"\u003Csvg class=\"ico\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"\u003E\u003Cpath d=\"M13 2L4 14h7l-1 8 9-12h-7l1-8z\"/\u003E\u003C/svg\u003E"};
+  var panel = document.getElementById('painel'), tabs = document.querySelectorAll('.tab'), hit = '';
+  function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
+  function norm(s) { return s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, ''); }
+  function show(id) {
+    var d = D[id];
+    tabs.forEach(function (t) { t.setAttribute('aria-selected', t.dataset.id === id ? 'true' : 'false'); });
+    var stack = '<div class="imgs n' + Math.max(1, d.thumbs.length) + '">' + (d.thumbs.length ? d.thumbs.map(function (u) { return '<img src="' + esc(u) + '" alt="" loading="lazy">'; }).join('') : '<div class="ph">Modelos em produção</div>') + '</div>';
+    panel.innerHTML = '<div class="fade"><p class="lbl">' + (d.breve ? 'Em breve' : 'Disponível agora') + '</p><h2>' + esc(d.nome) + '</h2><p class="res">' + esc(d.resumo) + '</p>' +
+      '<ul class="feat">' + d.feat.map(function (f) { return '<li>' + esc(f) + '</li>'; }).join('') + '</ul>' +
+      '<p class="lbl">' + d.areas.length + ' áreas ' + (d.breve ? 'previstas' : 'prontas no painel') + '</p><div class="chips">' +
+      d.areas.map(function (a, i) { return '<span class="chip' + (hit && norm(a[0]) === hit ? ' hit' : '') + '" style="--i:' + i + '">' + (I[a[1]] || '') + esc(a[0]) + '</span>'; }).join('') + '</div>' +
+      (d.url ? '<a class="go" href="' + esc(d.url) + '">Ver ' + (d.modelos > 1 ? 'os ' + d.modelos + ' modelos' : 'o modelo') + ' de ' + esc(d.nome.toLowerCase()) + ' →</a>' : '<span class="go off">Modelos em produção</span>') + '</div>' +
+      '<div class="stack fade">' + stack + '<div class="count"><strong>' + (d.modelos || '—') + '</strong><span>' + (d.modelos ? 'modelo' + (d.modelos > 1 ? 's' : '') + ' de layout' : 'em produção') + '</span></div></div>';
+    var h = panel.querySelector('.chip.hit'); if (h) h.scrollIntoView({ block: 'nearest' });
+  }
+  tabs.forEach(function (t) {
+    t.addEventListener('click', function () { hit = ''; show(t.dataset.id); });
+    t.addEventListener('pointermove', function (e) { var r = t.getBoundingClientRect(); t.style.setProperty('--mx', (e.clientX - r.left) + 'px'); });
+  });
+  show(Object.keys(D)[0]);
+  // Busca inteligente: encontra a área em qualquer segmento (sem acentos)
+  var q = document.getElementById('q'), res = document.getElementById('res'), idx = [], sel = -1;
+  Object.keys(D).forEach(function (id) { D[id].areas.forEach(function (a) { idx.push({ id: id, nome: a[0], ic: a[1], n: norm(a[0]) }); }); });
+  function render() {
+    var v = norm(q.value.trim()); sel = -1;
+    if (v.length < 2) { res.hidden = true; return; }
+    var m = idx.filter(function (x) { return x.n.indexOf(v) > -1; }).slice(0, 12);
+    res.innerHTML = m.length ? m.map(function (x, i) { var p = x.n.indexOf(v); return '<button type="button" role="option" data-i="' + idx.indexOf(x) + '">' + (I[x.ic] || '') + '<span>' + esc(x.nome.slice(0, p)) + '<mark>' + esc(x.nome.slice(p, p + v.length)) + '</mark>' + esc(x.nome.slice(p + v.length)) + '</span><small>' + esc(D[x.id].nome) + (D[x.id].breve ? ' · em breve' : '') + '</small></button>'; }).join('') : '<p>Nenhuma área encontrada. Fale com a gente: criamos o site do seu segmento.</p>';
+    res.hidden = false;
+  }
+  function pick(i) { var x = idx[i]; hit = x.n; res.hidden = true; q.value = x.nome; show(x.id); document.getElementById('segmentos').scrollIntoView({ behavior: 'smooth' }); }
+  q.addEventListener('input', render);
+  q.addEventListener('keydown', function (e) {
+    var b = res.querySelectorAll('button'); if (!b.length) return;
+    if (e.key === 'ArrowDown' || e.key === 'ArrowUp') { e.preventDefault(); sel = (sel + (e.key === 'ArrowDown' ? 1 : -1) + b.length) % b.length; b.forEach(function (x, k) { x.classList.toggle('on', k === sel); }); }
+    if (e.key === 'Enter') { e.preventDefault(); pick(+(b[Math.max(sel, 0)].dataset.i)); }
+    if (e.key === 'Escape') res.hidden = true;
+  });
+  res.addEventListener('click', function (e) { var b = e.target.closest('button'); if (b) pick(+b.dataset.i); });
+  document.addEventListener('click', function (e) { if (!e.target.closest('.search')) res.hidden = true; });
+  // Contadores
+  if (!matchMedia('(prefers-reduced-motion: reduce)').matches) document.querySelectorAll('[data-n]').forEach(function (el) {
+    var end = +el.dataset.n, t0 = null; el.textContent = '0';
+    function st(ts) { if (!t0) t0 = ts; var p = Math.min(1, (ts - t0) / 1400); el.textContent = Math.round(end * (1 - Math.pow(1 - p, 3))); if (p < 1) requestAnimationFrame(st); }
+    setTimeout(function () { requestAnimationFrame(st); }, 600);
+  });
+})();
+</script>
 </body>
 </html>

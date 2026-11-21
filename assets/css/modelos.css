@@ -29,3 +29,6 @@ body { margin: 0; background: var(--paper); color: var(--ink); font: 16px/1.6 "H
 .mg-actions button.on { background: var(--accent); border-color: var(--accent); color: #fff; cursor: default; }
 .mg-actions form { margin: 0; }
 .mg-foot { padding: 30px 0 50px; color: var(--muted); font-size: .88rem; border-top: 1px solid var(--line); }
+
+.mg-back { margin: 0 0 14px; } .mg-back a { color: inherit; opacity: .75; text-decoration: none; font-size: .92rem; } .mg-back a:hover { opacity: 1; }
+.mg-foot a { color: inherit; }

@@ -1,0 +1,7 @@
+Fotos de demonstração (Unsplash License). Substitua pelas fotos reais da clínica.
+mariana.jpg   - Beatriz Mendez        https://unsplash.com/photos/_4xStiTXY1o
+rafael.jpg    - Vidak                 https://unsplash.com/photos/5vfc-1KQLtE
+clinica-1.jpg - Benyamin Bohlouli     https://unsplash.com/photos/e7MJLM5VGjY
+clinica-2.jpg - Kari Bjorn Photography https://unsplash.com/photos/Fdku_oMrDvk
+clinica-3.jpg - Harold Hisona         https://unsplash.com/photos/Bg81yWKZlMg
+sorriso.jpg   - Lesly Juarez          https://unsplash.com/photos/1AhGNGKuhR0

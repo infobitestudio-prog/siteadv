@@ -157,8 +157,8 @@ document.querySelectorAll('[data-ano]').forEach(function (el) { el.textContent =
   if (!anim || reduce || !('IntersectionObserver' in window)) return;
 
   // Entrada dos blocos ao aparecer na tela
-  var sel = '.section-head, .area-row, .tool, .person, .feature, .fact, .principles li, .steps li, .faq details, .gallery-item, .at-panel, .about-aside, .prose-lg, .cta-in > div';
-  var els = Array.prototype.slice.call(document.querySelectorAll(sel)).filter(function (el) { return !el.closest('.hero, .hero-cheio, .hero-editorial, .hero-dividido, .hero-cartao, .lp-hero'); });
+  var sel = '.section-head, .area-row, .tool, .person, .feature, .fact, .principles li, .steps li, .faq details, .gallery-item, .at-panel, .about-aside, .prose-lg, .cta-in > div, .jr-line, .jr-step, .cv-list li, .cv-urg, .ag-step, .ag-sum-card';
+  var els = Array.prototype.slice.call(document.querySelectorAll(sel)).filter(function (el) { return !el.closest('.arc-hero, .hero, .hero-cheio, .hero-editorial, .hero-dividido, .hero-cartao, .lp-hero'); });
   els.forEach(function (el, i) { el.classList.add('rv'); if (anim[1] === 'deslizar' && i % 2) el.classList.add('rv-dir'); el.style.transitionDelay = ((i % 4) * 70) + 'ms'; });
   var io = new IntersectionObserver(function (entries) {
     entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
